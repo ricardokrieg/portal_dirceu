@@ -1,0 +1,646 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+.home-body{
+	background:url(../images/home-bg.png) no-repeat;
+	background-size: cover;
+}
+.header-align{
+	text-align:center;
+}
+.logo{
+	margin:105px 0 47px 0;
+	display:inline-block;
+}
+.navigation{
+	background:url(../images/menu-bg.png) repeat-x;
+	border-bottom: 1px solid #181818;
+}
+ul.menu{
+	display:inline-block;
+	margin:0;
+	height:47px;
+}
+ul.menu li{
+	float:left;
+	margin:10px 10px;
+	
+}
+ul.menu li a{
+	color:#ffffff;
+	padding:5px;
+	font:lighter 20px "Oswald";
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.banner .container{
+	
+	padding:63px 0 83px 0;
+	
+	
+}
+.banner p{
+	color: #ffffff;
+	font:normal 14px "Oswald";
+
+}
+.home-banner{
+	background:url(../images/stamp.png) no-repeat 99% 88%;
+}
+.banner{
+	
+	
+}
+.banner h1{
+	color:#ffffff;
+	font:normal 60px "Oswald";
+
+}
+.banner p.peaser{
+	color:#ffffff;
+	font:lighter 30px "Palatino Linotype";
+	padding-right:20%;
+}
+a.banner-learn-more{
+	color:#049bfb;
+	font:lighter 20px "Palatino Linotype";
+	cursor: pointer;
+	text-decoration: none;
+}
+.quotes,.owner{
+	color: #ffffff;
+	font:lighter 18px "Palatino Linotype";
+	
+}
+.quotes{
+	font-style: italic;
+	margin-top: 47px;
+}
+.inner-wrapper{
+	background: rgba(69, 78, 33, 0.8);
+}
+.pick-center{
+	margin:0 auto !important;
+	float:none !important;
+	display:block !important;
+}
+.tile-holder-light{
+	background:#ffffff;
+}
+.footer{
+	background:#1c2401;
+}
+.case{
+	background:#ffffff;
+}
+.teaser{
+	background:#82c015;
+}
+.tile-head-draft{
+	text-align: center;
+}
+.tile-head-left-beam,.tile-head-right-beam{
+	height:37px;
+	border-bottom: 1px solid #ffffff;
+	overflow: hidden;
+	width:30%;
+}
+.tile-head-left-beam{
+	float:left;
+}
+.tile-head-right-beam{
+	float: right;
+}
+.tile-head-draft h2{
+	display: inline-block;
+}
+.tip-top-roller{
+	background:url(../images/tip-bg-white.png) repeat-x;
+	height: 9px;
+}
+.tip-bottom-roller{
+	background:url(../images/bottom-bg-green.png) repeat-x;
+	height: 8px;
+}
+.tip-bottom-ripper{
+	background:url(../images/bottom-arrow.png) repeat-x;
+	height: 9px;
+}
+
+.case-holder .one-third{
+	text-align: center;
+	padding:15px 0 15px 0;
+}
+.case-holder h6{
+	font:normal 21px "Oswald";
+	color:#608e11;
+	margin-bottom: 10px;
+}
+.case-holder p{
+	font:normal 18px "Palatino Linotype";
+	color:#2d2d2d;
+	margin-top: 10px;
+	padding:0 20% 0 20%;
+
+}
+.case-holder img{
+	border: 3px solid #cfcfcf;
+}
+.teaser{
+	padding:20px 0 20px 0;
+	
+
+}
+.teaser .container .one-third{
+	margin-right: 9px !important;
+	border-right: 1px solid #ffffff;
+}
+
+.teaser h5{
+	color:#ffffff;
+	font:normal 18px "Oswald";
+	margin-bottom: 10px;
+}
+a.teaser-read-more{
+	color:#0277b4;
+	font:normal 15px "Oswald";
+	text-decoration: none;
+	cursor: pointer;
+
+
+}
+.tile-holder-dark{
+	padding:40px 0 30px 0;
+}
+.tile-head-draft h2{
+	color:#ffffff;
+	font:normal 48px "Oswald";
+
+}
+.block-items{
+	text-align: center;
+	margin-right: 5px !important;
+	background:#ffffff;
+	border-radius:15px 15px 15px 15px;
+	overflow: hidden;
+}
+.block-body{
+	
+	border-left:4px solid #b0b2b2;
+	border-right:4px solid #b0b2b2;
+	border-bottom:4px solid #b0b2b2;
+	border-radius:0px 0px 15px 15px;
+	overflow: hidden;
+}
+.block-head{
+	color:#ffffff;
+	font:normal 24px "Oswald";
+}
+
+.Bronze .block-head{
+	background: #bc981a
+
+}
+.silver .block-head{
+	background: #a5a4a4;
+}
+.gold .block-head{
+	background: #f4ba0a;
+}
+.master .block-head{
+	background: #89a527;
+}
+.block-body ul li{
+	font:normal 14px "Oswald";
+	color:#3e3e3e;
+	margin-bottom: 0px;
+}
+.block-body ul{
+	margin:10px 0 10px 0;
+	overflow: hidden;
+}
+.block-body ul li.main-block-title{
+	font:normal 30px "Oswald";
+}
+.block-body ul li.strip-item{
+	display: inline-block;
+	color:#3b4a00;
+	font:normal 18px "Oswald";
+	margin-top: 5px;
+	background: #e1e1df;
+	padding: 0 5px 0 5px;
+}
+.block-body ul li a{
+	color:#024063;
+	cursor: pointer;
+}
+.tile-desc{
+	font:normal 24px "Palatino Linotype";
+	color:#82c015;
+}
+.tile-holder-light .tile-head-draft h2{
+	color:#63930e;
+}
+.tile-holder-light .tile-head-draft .tile-head-left-beam,.tile-holder-light .tile-head-draft .tile-head-right-beam{
+	border-color:#63930e;
+}
+.tile-holder-light .tile-desc{
+	color:#4e4e4e;
+}
+.tile-holder-light{
+	padding: 15px 0 55px 0;
+}
+.footer{
+	padding:15px 0 15px 0;
+}
+ul.left-menu li a,ul.right-menu li a{
+	color:#ffffff;
+	font:normal 15px "Oswald";
+	text-decoration: none;
+
+}
+ul.left-menu li,ul.right-menu li{
+	margin-bottom: 4px;
+}
+.footer h5{
+	color:#ffffff;
+	font:normal 24px "Oswald";
+	margin-bottom: 10px;
+}
+ul.partner-list li{
+text-align: center;
+}
+ul.left-menu {
+border-right: 1px solid #ffffff;
+}
+
+ul.right-menu {
+border-left: 1px solid #ffffff;
+padding-left: 20px;
+
+}
+.footer-block-right h5{
+	margin-left: 20px;
+}
+.footer-top{
+	overflow: hidden;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #2f322b;
+}
+.footer-bottom{
+	text-align: center;
+}
+ul.social-list li{
+	float: left;
+	margin: 0 5px;
+}
+ul.social-list li a{
+	display: block;
+	width: 44px;
+	height: 44px;
+}
+ul.social-list{
+	overflow: hidden;
+	display: inline-block;
+}
+ul.social-list li a.twiiter-icon{
+	background:url(../images/global-sprite.png) no-repeat -3px -570px;
+}
+ul.social-list li a.facebook-icon{
+	background:url(../images/global-sprite.png) no-repeat -3px -349px;
+}
+
+ul.social-list li a.google-icon{
+	background:url(../images/global-sprite.png) no-repeat -3px -495px;
+}
+
+ul.social-list li a.pin-icon{
+	background:url(../images/global-sprite.png) no-repeat -3px -423px;
+}
+.footer-bottom{
+	margin:30px 0 15px 0;
+}
+.footer-bottom h3{
+	color: #ffffff;
+	font:normal 36px "Oswald";
+}
+.stay-middle{
+	margin: 0 auto !important;
+	float: none !important;
+	display: block !important;
+}
+.stay-middle label{
+	font:lighter 18px "Oswald";
+	
+}
+label.captcha-label {
+	display: inline-block;
+}
+label.captcha-label span{
+	float: none;
+}
+label.captcha-label input[type=text]{
+	width: 30px;
+	float: right;
+	margin-left: 10px;
+}
+input[type="submit"].contact-submit{
+	clear: both;
+	color: #ffffff;
+	background: #466901;
+	padding: 3px 10px;
+	font:lighter 18px "Oswald";
+	float: right;
+}
+.stay-middle input[type=text],.stay-middle textarea{
+	width: 98%;
+}
+
+.sign-up-panel,.tweet-panel{
+	text-align: center;
+}
+.search-wrapper{
+	background:#eeeded;
+	border-bottom:2px solid #83af36;
+	text-align:center;
+}
+.search-box{
+	width:216px;
+	float:right;
+	margin:12px 0;
+	background:#e4e2e2;
+}
+.search-wrapper p{
+	width:27%;
+	margin-left:14%;
+	color:#505050;
+	font:lighter 15px/15px "Palatino Linotype";
+	font-style:italic;
+	display:inline-block;
+	margin-top:11px;
+	margin-bottom:0;
+}
+.search-box input[type=text]{
+	background:transparent;
+	width:80%;
+	padding:5px;
+	float:left;
+	margin:0;
+	border:none;
+	font:normal 15px/15px "Palatino Linotype";
+	font-style:italic;
+	color:#737373;
+	outline:none;
+}
+.search-box .search-button{
+	float:left;
+	border:none;
+	background:transparent;
+	margin:0;
+	background:url(../images/lence.png) no-repeat 5px 8px;
+	padding:8px 15px;
+	
+}
+.top-header-panel{
+	border-top:1px solid #e1ecce;
+	border-bottom:1px solid #e1ecce;
+	padding:15px 0;
+}
+
+.title-strip{
+	background:#68a008;
+	color:#ffffff;
+	font:normal 22px "Oswald";
+	padding:3px 0;
+}
+ul.widjet-tab{
+	background:#565656;
+	overflow:hidden;
+}
+ul.widjet-tab li{
+	float:left;
+	margin-bottom:0;
+	overflow:hidden;
+}
+ul.widjet-tab li a{
+	padding:5px 19px;
+	color:#ffffff;
+	text-decoration:none;
+	font:normal 15px "Oswald";
+	cursor:pointer;
+	display:block;
+}
+.content-body{
+	padding:20px 0;
+	
+}
+.content-holder{
+	border-right:1px solid #d6d5d5;
+	padding-right:10px;
+	text-align:justify;
+}
+ul.wid-list-holder li img{
+	float:left;
+	margin:0 10px 10px 0px;
+}
+ul.wid-list-holder li{
+	clear:both;
+	overflow:hidden;
+	border-bottom:1px solid #c6c5c5;
+}
+.wid-list-holder span a{
+	font:normal 15px "Oswald";
+	color:#68a008;
+	text-decoration:none;
+	cursor:pointer;
+	display:block;
+}
+.wid-list-holder span a i{
+	font-style:normal;
+	width:9px;
+	height:14px;
+	background:url(../images/global-sprite.png) no-repeat -20px -101px;
+	float:right;
+	font:lighter 9px "Oswald";
+	color:#302f2f;
+	padding:3px;
+	
+}
+
+ul.wid-list-holder li p{
+	font:normal 12px "Oswald";
+}
+.widjet-content h6{
+	padding: 5px 19px;
+	color: #ffffff;
+	background:#565656;
+	font: normal 15px "Oswald";
+	margin-bottom:15px;
+	
+	
+}
+.widjet-content img.strenth{
+	width:100%;
+	margin-bottom:10px;
+}
+.blog-wrapper{
+	background:rgba(246,248,250,0.8);
+}
+.blog-content-holder{
+	padding-right:20%;
+}
+.date-block{
+	float:left;
+	border-right:1px solid #272727;
+	padding-right:10px;
+	margin-right:10px;
+	font:lighter 14px "Oswald";
+	color: #272727;
+	text-transform: uppercase;
+	display: inline;
+}
+.date-block span{
+	font-size: 22px;
+
+}
+.blog-wrapper{
+	padding:30px 0;
+}
+.blog-content-holder h4{
+	color:#3e3e3e;
+	font:normal 24px "Oswald";
+}
+.blog-content-holder h4 span{
+	margin-left: 5px;
+	color: #63930e;
+}
+.blog-content-stall{
+	margin-top: 10px;
+	font:normal 14px "Oswald";
+
+}
+.blog-content-holder img{
+	width: 100%;
+	text-align: justify;
+}
+.blog-read-more{
+	text-align: right;
+	display: block;
+	color: #63930e;
+	font:normal 14px "Oswald";
+	cursor: pointer;
+}
+.blog-content-stall{
+	text-align: justify;
+}
+ul.blog-item-footer li{
+	float: left;
+	margin:0;
+}
+ul.blog-item-footer li a{
+	color: #a4a3a3;
+	padding: 0 15px 0 15px;
+	text-decoration: none;
+	cursor: pointer;
+}
+ul.blog-item-footer li a:hover{
+	color: #ffffff;
+	background-color: #63930e;
+	border-radius: 25px;
+}
+ul.blog-item-footer{
+	overflow: hidden;
+	border-bottom: 1px solid #a4a3a3; 
+	margin-top: 10px;
+}
+.blog-widget-holder h5{
+	color: #63930e;
+	font:normal 30px "Oswald";
+	border-bottom: 1px solid #d4d5d6;
+	padding-left: 42px;
+	
+}
+.blog-widget-holder h5.recent-post{
+	background: url(../images/global-sprite.png) no-repeat -3px -635px;
+
+}
+.blog-widget-holder h5.recent-comments{
+	background: url(../images/global-sprite.png) no-repeat -3px -688px;
+
+}
+ul.widjet-blog-list{
+	margin-top: 15px;
+	margin-left: 32px;
+	}
+ul.widjet-blog-list li{
+	margin:0;
+	overflow: hidden;
+	background: url(../images/global-sprite.png) no-repeat -21px -303px;
+	padding-left: 17px;
+}
+ul.widjet-blog-list li a{
+	text-decoration: none;
+	cursor: pointer;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #d4d5d6;
+	display: block;
+	font:lighter 14px "Oswald";
+	padding-left: 10px;
+
+}
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
