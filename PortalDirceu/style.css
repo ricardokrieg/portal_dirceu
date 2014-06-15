@@ -10,7 +10,7 @@ header.header {
     header.header .container h1.branding {
       position: absolute;
       left: 117px;
-      bottom: -21px;
+      bottom: -45px;
       z-index: 2; }
     header.header .container .logo-bg {
       width: 394px;

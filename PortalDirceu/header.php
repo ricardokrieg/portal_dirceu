@@ -37,19 +37,15 @@
 <body <?php body_class(); ?>>
     <header class='header'>
         <div class='container'>
-            <?php if (get_theme_mod('portaldirceu_logo')): ?>
-                <?php echo esc_url(get_theme_mod('portaldirceu_logo')); ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+            <h1 class='branding'>
+                <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+                    <?php if (get_theme_mod('portaldirceu_logo')): ?>
+                        <img src="<?php echo esc_url(get_theme_mod('portaldirceu_logo')); ?>" />
+                    <?php else: ?>
                         <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
-                    </a>
-                </h1>
-            <?php else: ?>
-                <h1 class='branding' style='text-indent: 0'>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                        <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
-                    </a>
-                </h1>
-            <?php endif; ?>
+                    <?php endif; ?>
+                </a>
+            </h1>
 
             <span class='logo-bg'></span>
 
