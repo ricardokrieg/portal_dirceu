@@ -35,18 +35,24 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php if (get_theme_mod('portaldirceu_logo')): ?>
-        <h1 style="background: url(<?php echo esc_url(get_theme_mod('xicamais_logo')); ?>) no-repeat;">
-            <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
-            </a>
-        </h1>
-    <?php else: ?>
-        <h1 class='branding' style='text-indent: 0'>
-            <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
-            </a>
-        </h1>
-    <?php endif; ?>
+    <header class='header'>
+        <div class='container'>
+            <?php if (get_theme_mod('portaldirceu_logo')): ?>
+                <?php echo esc_url(get_theme_mod('portaldirceu_logo')); ?>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+                        <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
+                    </a>
+                </h1>
+            <?php else: ?>
+                <h1 class='branding' style='text-indent: 0'>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
+                        <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
+                    </a>
+                </h1>
+            <?php endif; ?>
 
-    <?#php wp_nav_menu(array('theme_location' => 'primary', 'menu_class' => 'menu')); ?>
+            <span class='logo-bg'></span>
+
+            <?php wp_nav_menu(array('theme_location' => 'principal', 'menu_class' => 'list-inline', 'items_wrap' => '<span class="menu-left-bg"></span><ul id="%1$s" class="%2$s">%3$s</ul><span class="menu-right-bg"></span>')); ?>
+        </div>
+    </header>

@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<div class='slide-container'>
+</div>
+
 <?php if (have_posts()): ?>
 	<section id='main'>
         <?#php dynamic_sidebar('sidebar-home'); ?>

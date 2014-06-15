@@ -55,7 +55,6 @@ function portaldirceu_setup() {
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(array(
 		'principal'		=> __('Menu Principal', 'portaldirceu'),
-		'secundario'	=> __('Menu Secundário', 'portaldirceu'),
 	));
 
 	/*

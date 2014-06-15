@@ -1,0 +1,59 @@
+body {
+  background: #fff; }
+
+header.header {
+  background: #f6f6f7 url(img/header_shadow.png) repeat-x top left;
+  height: 173px;
+  padding-top: 70px; }
+  header.header .container {
+    position: relative; }
+    header.header .container h1.branding {
+      position: absolute;
+      left: 117px;
+      bottom: -21px;
+      z-index: 2; }
+    header.header .container .logo-bg {
+      width: 394px;
+      height: 84px;
+      background: url(img/logo_bg.png) no-repeat;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -74px; }
+    header.header .container .menu-menu-principal-container {
+      float: right; }
+      header.header .container .menu-menu-principal-container ul {
+        background: url(img/menu_bg.png) repeat-x;
+        height: 103px;
+        float: left; }
+        header.header .container .menu-menu-principal-container ul li a {
+          text-transform: uppercase;
+          color: white;
+          text-decoration: none;
+          line-height: 103px;
+          height: 103px;
+          display: block;
+          font-size: 18px;
+          padding: 0 10px; }
+        header.header .container .menu-menu-principal-container ul li a:hover {
+          text-decoration: none; }
+        header.header .container .menu-menu-principal-container ul li:hover a {
+          background: url(img/menu_active_bg.png) repeat-x #baed1f;
+          height: 83px;
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px; }
+      header.header .container .menu-menu-principal-container .menu-left-bg, header.header .container .menu-menu-principal-container .menu-right-bg {
+        width: 69px;
+        height: 103px;
+        background-repeat: no-repeat;
+        display: block; }
+      header.header .container .menu-menu-principal-container .menu-left-bg {
+        float: left;
+        background-image: url(img/menu_left_bg.png); }
+      header.header .container .menu-menu-principal-container .menu-right-bg {
+        float: left;
+        background-image: url(img/menu_right_bg.png); }
+
+.slide-container {
+  background: #baed1f;
+  height: 400px; }
