@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<div class='slide-container'>
-</div>
+<div class='slide-container'></div>
+<div class='slide-shadow'></div>
 
 <?php if (have_posts()): ?>
 	<section id='main'>

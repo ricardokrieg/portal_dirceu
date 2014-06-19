@@ -55,5 +55,11 @@ header.header {
         background-image: url(img/menu_right_bg.png); }
 
 .slide-container {
-  background: #baed1f;
+  background: #baed1f url(img/slide_bg.png) repeat-x bottom;
   height: 400px; }
+
+.slide-shadow {
+  width: 1375px;
+  height: 43px;
+  background: url(img/slide_shadow.png) no-repeat bottom;
+  margin: 0 auto; }
