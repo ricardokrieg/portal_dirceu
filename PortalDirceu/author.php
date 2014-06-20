@@ -3,7 +3,7 @@
 <?php if (have_posts()) : ?>
 	<?php the_post(); ?>
 	<h1>
-		<?php printf(__('Posts de %s', 'xicamais'), get_the_author()); ?>
+		<?php printf(__('Posts de %s', 'portaldirceu'), get_the_author()); ?>
 	</h1>
 
 	<?php if (get_the_author_meta('description')) : ?>
@@ -16,7 +16,7 @@
 			<?php get_template_part('content', get_post_format()); ?>
 		<?php endwhile; ?>
 
-		<?php xicamais_paging_nav(); ?>
+		<?php portaldirceu_paging_nav(); ?>
 	</section>
 <?php else: ?>
 	<section id='main'>

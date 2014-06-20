@@ -6,30 +6,30 @@
 		    <ul>
 		        <li class='comment'>
 		        	<h3>
-		        		<?php printf(_n("<span>1</span> comentário", "<span>%s</span> comentários", get_comments_number(), 'xicamais'), number_format_i18n(get_comments_number())); ?>
+		        		<?php printf(_n("<span>1</span> comentário", "<span>%s</span> comentários", get_comments_number(), 'portaldirceu'), number_format_i18n(get_comments_number())); ?>
 		        	</h3>
 		        </li>
 
 				<?php if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
 					<nav role='navigation'>
-						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'xicamais')); ?></div>
-						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'xicamais')); ?></div>
+						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'portaldirceu')); ?></div>
+						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'portaldirceu')); ?></div>
 					</nav>
 				<?php endif; ?>
 
-				<?php wp_list_comments(array('callback' => 'xicamais_comment', 'style' => 'ul', 'short_ping' => true, 'avatar_size'=> 76,)); ?>
+				<?php wp_list_comments(array('callback' => 'portaldirceu_comment', 'style' => 'ul', 'short_ping' => true, 'avatar_size'=> 76,)); ?>
 
 				<?php if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
 					<nav role='navigation'>
-						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'xicamais')); ?></div>
-						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'xicamais')); ?></div>
+						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'portaldirceu')); ?></div>
+						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'portaldirceu')); ?></div>
 					</nav>
 				<?php endif; ?>
 			</ul>
 		</span>
 
 		<?php if (!comments_open()): ?>
-			<p class='no-comments'><?php _e('Comentários não são permitidos.', 'xicamais'); ?></p>
+			<p class='no-comments'><?php _e('Comentários não são permitidos.', 'portaldirceu'); ?></p>
 		<?php endif; ?>
 	<?php endif; ?>
 

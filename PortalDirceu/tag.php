@@ -15,7 +15,7 @@
 			<?php get_template_part('content', get_post_format()); ?>
 		<?php endwhile; ?>
 
-		<?php xicamais_paging_nav(); ?>
+		<?php portaldirceu_paging_nav(); ?>
 	</section>
 <?php else: ?>
 	<section id='main'>

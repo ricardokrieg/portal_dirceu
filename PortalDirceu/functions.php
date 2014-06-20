@@ -144,8 +144,6 @@ function portaldirceu_has_featured_posts() {
 }
 
 function portaldirceu_widgets_init() {
-	require get_template_directory() . '/inc/widgets.php';
-
 	register_sidebar(array(
 		'name'          => __('Página Inicial', 'portaldirceu'),
 		'id'            => 'sidebar-home',

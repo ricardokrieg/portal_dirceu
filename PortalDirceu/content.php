@@ -19,15 +19,15 @@
         </section>
 
         <section class='content'>
-            <?php xicamais_post_thumbnail(); ?>
+            <?php portaldirceu_post_thumbnail(); ?>
 
             <?php if (is_search()): ?>
                 <?php the_excerpt(); ?>
             <?php else: ?>
-                <?php the_content(__('Leia Mais', 'xicamais')); ?>
+                <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
                 <?php
                     wp_link_pages(array(
-                        'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'xicamais' ). "</span>",
+                        'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
                         'after'       => "</div>",
                         'link_before' => "<span>",
                         'link_after'  => "</span>",

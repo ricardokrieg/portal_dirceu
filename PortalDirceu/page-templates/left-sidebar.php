@@ -6,7 +6,7 @@
 </aside>
 
 <section id='main' class='left-sidebar'>
-    <?php if (is_front_page() && xicamais_has_featured_posts()): ?>
+    <?php if (is_front_page() && portaldirceu_has_featured_posts()): ?>
     	<?php get_template_part('featured-content'); ?>
     <?php endif; ?>
 

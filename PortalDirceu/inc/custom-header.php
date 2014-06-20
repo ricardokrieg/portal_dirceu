@@ -1,26 +1,26 @@
 <?php
 /**
- * Implement Custom Header functionality for XicaMais
+ * Implement Custom Header functionality for PortalDirceu
  *
  * @package WordPress
- * @subpackage xicamais
- * @since XicaMais 1.0
+ * @subpackage portaldirceu
+ * @since PortalDirceu 1.0
  */
 
 /**
  * Set up the WordPress core custom header settings.
  *
- * @since XicaMais 1.0
+ * @since PortalDirceu 1.0
  *
- * @uses xicamais_header_style()
- * @uses xicamais_admin_header_style()
- * @uses xicamais_admin_header_image()
+ * @uses portaldirceu_header_style()
+ * @uses portaldirceu_admin_header_style()
+ * @uses portaldirceu_admin_header_image()
  */
-function xicamais_custom_header_setup() {
+function portaldirceu_custom_header_setup() {
 	/**
-	 * Filter XicaMais custom-header support arguments.
+	 * Filter PortalDirceu custom-header support arguments.
 	 *
-	 * @since XicaMais 1.0
+	 * @since PortalDirceu 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -35,26 +35,26 @@ function xicamais_custom_header_setup() {
 	 *                                          the Appearance > Header screen.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'xicamais_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'portaldirceu_custom_header_args', array(
 		'default-text-color'     => 'fff',
 		'width'                  => 1260,
 		'height'                 => 240,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'xicamais_header_style',
-		'admin-head-callback'    => 'xicamais_admin_header_style',
-		'admin-preview-callback' => 'xicamais_admin_header_image',
+		'wp-head-callback'       => 'portaldirceu_header_style',
+		'admin-head-callback'    => 'portaldirceu_admin_header_style',
+		'admin-preview-callback' => 'portaldirceu_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'xicamais_custom_header_setup' );
+add_action( 'after_setup_theme', 'portaldirceu_custom_header_setup' );
 
-if ( ! function_exists( 'xicamais_header_style' ) ) :
+if ( ! function_exists( 'portaldirceu_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see xicamais_custom_header_setup().
+ * @see portaldirceu_custom_header_setup().
  *
  */
-function xicamais_header_style() {
+function portaldirceu_header_style() {
 	$text_color = get_header_textcolor();
 
 	// If no custom color for text is set, let's bail.
@@ -63,7 +63,7 @@ function xicamais_header_style() {
 
 	// If we get this far, we have custom styles.
 	?>
-	<style type="text/css" id="xicamais-header-css">
+	<style type="text/css" id="portaldirceu-header-css">
 	<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
@@ -85,20 +85,20 @@ function xicamais_header_style() {
 	</style>
 	<?php
 }
-endif; // xicamais_header_style
+endif; // portaldirceu_header_style
 
 
-if ( ! function_exists( 'xicamais_admin_header_style' ) ) :
+if ( ! function_exists( 'portaldirceu_admin_header_style' ) ) :
 /**
  * Style the header image displayed on the Appearance > Header screen.
  *
- * @see xicamais_custom_header_setup()
+ * @see portaldirceu_custom_header_setup()
  *
- * @since XicaMais 1.0
+ * @since PortalDirceu 1.0
  */
-function xicamais_admin_header_style() {
+function portaldirceu_admin_header_style() {
 ?>
-	<style type="text/css" id="xicamais-admin-header-css">
+	<style type="text/css" id="portaldirceu-admin-header-css">
 	.appearance_page_custom-header #headimg {
 		background-color: #000;
 		border: none;
@@ -121,17 +121,17 @@ function xicamais_admin_header_style() {
 	</style>
 <?php
 }
-endif; // xicamais_admin_header_style
+endif; // portaldirceu_admin_header_style
 
-if ( ! function_exists( 'xicamais_admin_header_image' ) ) :
+if ( ! function_exists( 'portaldirceu_admin_header_image' ) ) :
 /**
  * Create the custom header image markup displayed on the Appearance > Header screen.
  *
- * @see xicamais_custom_header_setup()
+ * @see portaldirceu_custom_header_setup()
  *
- * @since XicaMais 1.0
+ * @since PortalDirceu 1.0
  */
-function xicamais_admin_header_image() {
+function portaldirceu_admin_header_image() {
 ?>
 	<div id="headimg">
 		<?php if ( get_header_image() ) : ?>
@@ -141,4 +141,4 @@ function xicamais_admin_header_image() {
 	</div>
 <?php
 }
-endif; // xicamais_admin_header_image
+endif; // portaldirceu_admin_header_image

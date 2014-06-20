@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<h1><?php _e('Não Encontrado', 'xicamais'); ?></h1>
+<h1><?php _e('Não Encontrado', 'portaldirceu'); ?></h1>
 
 <section id='main'>
 	<section class='post'>
 		<article>
 			<section class='content'>
-				<p><?php _e('Parece que não encontramos nada nesta página. Experimente procurar algo:', 'xicamais'); ?></p>
+				<p><?php _e('Parece que não encontramos nada nesta página. Experimente procurar algo:', 'portaldirceu'); ?></p>
 
 				<?php get_search_form(); ?>
 			</section>

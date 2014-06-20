@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): ?>
 	<h1>
-		<?php printf(__('Resultados para: %s', 'xicamais'), get_search_query()); ?>
+		<?php printf(__('Resultados para: %s', 'portaldirceu'), get_search_query()); ?>
 	</h1>
 
 	<section id='main'>
@@ -10,7 +10,7 @@
 			<?php get_template_part('content', get_post_format()); ?>
 		<?php endwhile; ?>
 
-		<?php xicamais_paging_nav(); ?>
+		<?php portaldirceu_paging_nav(); ?>
 	</section>
 <?php else: ?>
 	<?php get_template_part('content', 'none'); ?>
