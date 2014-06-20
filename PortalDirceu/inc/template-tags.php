@@ -1,40 +1,28 @@
 <?php
-/**
- * Custom template tags for Apex Team
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
+// Custom template tags
 
-if ( ! function_exists( 'apexteam_paging_nav' ) ) :
-/**
- * Display navigation to next/previous set of posts when applicable.
- *
- * @since Apex Team 1.0
- *
- * @return void
- */
-function apexteam_paging_nav() {
+if (!function_exists('xicamais_paging_nav')) :
+// Display navigation to next/previous set of posts when applicable.
+function xicamais_paging_nav() {
 	// Don't print empty markup if there's only one page.
-	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+	if ($GLOBALS['wp_query']->max_num_pages < 2) {
 		return;
 	}
 
-	$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
-	$pagenum_link = html_entity_decode( get_pagenum_link() );
+	$paged        = get_query_var('paged') ? intval(get_query_var('paged')) : 1;
+	$pagenum_link = html_entity_decode(get_pagenum_link());
 	$query_args   = array();
-	$url_parts    = explode( '?', $pagenum_link );
+	$url_parts    = explode('?', $pagenum_link);
 
-	if ( isset( $url_parts[1] ) ) {
-		wp_parse_str( $url_parts[1], $query_args );
+	if (isset($url_parts[1])) {
+		wp_parse_str($url_parts[1], $query_args);
 	}
 
-	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
-	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+	$pagenum_link = remove_query_arg(array_keys($query_args), $pagenum_link);
+	$pagenum_link = trailingslashit($pagenum_link) . '%_%';
 
-	$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
-	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+	$format  = $GLOBALS['wp_rewrite']->using_index_permalinks() && ! strpos($pagenum_link, 'index.php') ? 'index.php/' : '';
+	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit('page/%#%', 'paged') : '?paged=%#%';
 
 	// Set up paginated links.
 	$links = paginate_links( array(
@@ -44,17 +32,14 @@ function apexteam_paging_nav() {
 		'current'  => $paged,
 		'mid_size' => 1,
 		'add_args' => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '&larr; Previous', 'apexteam' ),
-		'next_text' => __( 'Next &rarr;', 'apexteam' ),
+		'prev_text' => __('&larr; Previous', 'xicamais'),
+		'next_text' => __('Next &rarr;', 'xicamais'),
 	) );
 
-	if ( $links ) :
+	if ($links):
 
 	?>
 	<nav class="navigation paging-navigation" role="navigation" style='background:none'>
-		<?php if (false): ?>
-			<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'apexteam' ); ?></h1>
-		<?php endif; ?>
 		<div class="pagination loop-pagination">
 			<?php echo $links; ?>
 		</div><!-- .pagination -->
@@ -64,52 +49,42 @@ function apexteam_paging_nav() {
 }
 endif;
 
-if ( ! function_exists( 'apexteam_post_nav' ) ) :
-/**
- * Display navigation to next/previous post when applicable.
- *
- * @since Apex Team 1.0
- *
- * @return void
- */
-function apexteam_post_nav() {
+if (!function_exists('xicamais_post_nav')):
+// Display navigation to next/previous post when applicable.
+function xicamais_post_nav() {
 	// Don't print empty markup if there's nowhere to navigate.
-	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-	$next     = get_adjacent_post( false, '', false );
+	$previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
+	$next     = get_adjacent_post(false, '', false);
 
-	if ( ! $next && ! $previous ) {
+	if (!$next && !$previous) {
 		return;
 	}
-
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'apexteam' ); ?></h1>
-		<div class="nav-links">
-			<?php
-			if ( is_attachment() ) :
-				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'apexteam' ) );
-			else :
-				previous_post_link( '%link', __( '<span class="meta-nav">Previous Post</span>%title', 'apexteam' ) );
-				next_post_link( '%link', __( '<span class="meta-nav">Next Post</span>%title', 'apexteam' ) );
-			endif;
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
+	<nav class='navigation post-navigation' role='navigation'>
+		<?php
+		if (is_attachment()) :
+			previous_post_link('%link', __('<span class="meta-nav">Published In</span>%title', 'xicamais'));
+		else:
+			previous_post_link("<div class='nav-previous'>%link</div>", __("« Previous", 'xicamais'));
+			next_post_link("<div class='nav-next'>%link</div>", __("Next »", 'xicamais'));
+		endif;
+		?>
+	</nav>
 	<?php
 }
 endif;
 
-if ( ! function_exists( 'apexteam_posted_on' ) ) :
+if ( ! function_exists( 'xicamais_posted_on' ) ) :
 /**
  * Print HTML with meta information for the current post-date/time and author.
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  *
  * @return void
  */
-function apexteam_posted_on() {
+function xicamais_posted_on() {
 	if ( is_sticky() && is_home() && ! is_paged() ) {
-		echo '<span class="featured-post">' . __( 'Sticky', 'apexteam' ) . '</span>';
+		echo '<span class="featured-post">' . __( 'Sticky', 'xicamais' ) . '</span>';
 	}
 
 	// Set up and print post meta information.
@@ -126,12 +101,12 @@ endif;
 /**
  * Find out if blog has more than one category.
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  *
  * @return boolean true if blog has more than 1 category
  */
-function apexteam_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'apexteam_category_count' ) ) ) {
+function xicamais_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'xicamais_category_count' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
 			'hide_empty' => 1,
@@ -140,31 +115,31 @@ function apexteam_categorized_blog() {
 		// Count the number of categories that are attached to the posts
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'apexteam_category_count', $all_the_cool_cats );
+		set_transient( 'xicamais_category_count', $all_the_cool_cats );
 	}
 
 	if ( 1 !== (int) $all_the_cool_cats ) {
-		// This blog has more than 1 category so apexteam_categorized_blog should return true
+		// This blog has more than 1 category so xicamais_categorized_blog should return true
 		return true;
 	} else {
-		// This blog has only 1 category so apexteam_categorized_blog should return false
+		// This blog has only 1 category so xicamais_categorized_blog should return false
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in apexteam_categorized_blog.
+ * Flush out the transients used in xicamais_categorized_blog.
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  *
  * @return void
  */
-function apexteam_category_transient_flusher() {
+function xicamais_category_transient_flusher() {
 	// Like, beat it. Dig?
-	delete_transient( 'apexteam_category_count' );
+	delete_transient( 'xicamais_category_count' );
 }
-add_action( 'edit_category', 'apexteam_category_transient_flusher' );
-add_action( 'save_post',     'apexteam_category_transient_flusher' );
+add_action( 'edit_category', 'xicamais_category_transient_flusher' );
+add_action( 'save_post',     'xicamais_category_transient_flusher' );
 
 /**
  * Display an optional post thumbnail.
@@ -172,11 +147,11 @@ add_action( 'save_post',     'apexteam_category_transient_flusher' );
  * Wraps the post thumbnail in an anchor element on index
  * views, or a div element when on single views.
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  *
  * @return void
 */
-function apexteam_post_thumbnail() {
+function xicamais_post_thumbnail() {
 	if ( post_password_required() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -187,7 +162,7 @@ function apexteam_post_thumbnail() {
 	<div class="post-thumbnail">
 	<?php
 		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'apexteam-full-width' );
+			the_post_thumbnail( 'xicamais-full-width' );
 		} else {
 			the_post_thumbnail();
 		}
@@ -199,7 +174,7 @@ function apexteam_post_thumbnail() {
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
 	<?php
 		if ( ( ! is_active_sidebar( 'sidebar-2' ) || is_page_template( 'page-templates/full-width.php' ) ) ) {
-			the_post_thumbnail( 'apexteam-full-width' );
+			the_post_thumbnail( 'xicamais-full-width' );
 		} else {
 			the_post_thumbnail();
 		}

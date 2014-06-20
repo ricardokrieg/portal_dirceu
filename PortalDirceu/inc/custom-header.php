@@ -1,26 +1,26 @@
 <?php
 /**
- * Implement Custom Header functionality for Apex Team
+ * Implement Custom Header functionality for XicaMais
  *
  * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
+ * @subpackage xicamais
+ * @since XicaMais 1.0
  */
 
 /**
  * Set up the WordPress core custom header settings.
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  *
- * @uses apexteam_header_style()
- * @uses apexteam_admin_header_style()
- * @uses apexteam_admin_header_image()
+ * @uses xicamais_header_style()
+ * @uses xicamais_admin_header_style()
+ * @uses xicamais_admin_header_image()
  */
-function apexteam_custom_header_setup() {
+function xicamais_custom_header_setup() {
 	/**
-	 * Filter Apex Team custom-header support arguments.
+	 * Filter XicaMais custom-header support arguments.
 	 *
-	 * @since Apex Team 1.0
+	 * @since XicaMais 1.0
 	 *
 	 * @param array $args {
 	 *     An array of custom-header support arguments.
@@ -35,26 +35,26 @@ function apexteam_custom_header_setup() {
 	 *                                          the Appearance > Header screen.
 	 * }
 	 */
-	add_theme_support( 'custom-header', apply_filters( 'apexteam_custom_header_args', array(
+	add_theme_support( 'custom-header', apply_filters( 'xicamais_custom_header_args', array(
 		'default-text-color'     => 'fff',
 		'width'                  => 1260,
 		'height'                 => 240,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'apexteam_header_style',
-		'admin-head-callback'    => 'apexteam_admin_header_style',
-		'admin-preview-callback' => 'apexteam_admin_header_image',
+		'wp-head-callback'       => 'xicamais_header_style',
+		'admin-head-callback'    => 'xicamais_admin_header_style',
+		'admin-preview-callback' => 'xicamais_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'apexteam_custom_header_setup' );
+add_action( 'after_setup_theme', 'xicamais_custom_header_setup' );
 
-if ( ! function_exists( 'apexteam_header_style' ) ) :
+if ( ! function_exists( 'xicamais_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see apexteam_custom_header_setup().
+ * @see xicamais_custom_header_setup().
  *
  */
-function apexteam_header_style() {
+function xicamais_header_style() {
 	$text_color = get_header_textcolor();
 
 	// If no custom color for text is set, let's bail.
@@ -63,7 +63,7 @@ function apexteam_header_style() {
 
 	// If we get this far, we have custom styles.
 	?>
-	<style type="text/css" id="apexteam-header-css">
+	<style type="text/css" id="xicamais-header-css">
 	<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
@@ -85,20 +85,20 @@ function apexteam_header_style() {
 	</style>
 	<?php
 }
-endif; // apexteam_header_style
+endif; // xicamais_header_style
 
 
-if ( ! function_exists( 'apexteam_admin_header_style' ) ) :
+if ( ! function_exists( 'xicamais_admin_header_style' ) ) :
 /**
  * Style the header image displayed on the Appearance > Header screen.
  *
- * @see apexteam_custom_header_setup()
+ * @see xicamais_custom_header_setup()
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  */
-function apexteam_admin_header_style() {
+function xicamais_admin_header_style() {
 ?>
-	<style type="text/css" id="apexteam-admin-header-css">
+	<style type="text/css" id="xicamais-admin-header-css">
 	.appearance_page_custom-header #headimg {
 		background-color: #000;
 		border: none;
@@ -121,17 +121,17 @@ function apexteam_admin_header_style() {
 	</style>
 <?php
 }
-endif; // apexteam_admin_header_style
+endif; // xicamais_admin_header_style
 
-if ( ! function_exists( 'apexteam_admin_header_image' ) ) :
+if ( ! function_exists( 'xicamais_admin_header_image' ) ) :
 /**
  * Create the custom header image markup displayed on the Appearance > Header screen.
  *
- * @see apexteam_custom_header_setup()
+ * @see xicamais_custom_header_setup()
  *
- * @since Apex Team 1.0
+ * @since XicaMais 1.0
  */
-function apexteam_admin_header_image() {
+function xicamais_admin_header_image() {
 ?>
 	<div id="headimg">
 		<?php if ( get_header_image() ) : ?>
@@ -141,4 +141,4 @@ function apexteam_admin_header_image() {
 	</div>
 <?php
 }
-endif; // apexteam_admin_header_image
+endif; // xicamais_admin_header_image
