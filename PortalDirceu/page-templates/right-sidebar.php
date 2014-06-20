@@ -1,3 +1,4 @@
+<?php // Template Name: Right Sidebar Page ?>
 <?php get_header(); ?>
 
 <section id='main'>
@@ -11,7 +12,7 @@
 </section>
 
 <aside>
-    <?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 </aside>
 
 <?php get_footer();

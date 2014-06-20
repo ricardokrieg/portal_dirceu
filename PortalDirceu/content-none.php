@@ -1,31 +1,19 @@
-<?php
-/**
- * The template for displaying a "No posts found" message
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
-?>
+<h1><?php _e('Nada encontrado', 'xicamais'); ?></h1>
 
-<header class="page-header">
-	<h1 class="page-title"><?php _e( 'Nothing Found', 'apexteam' ); ?></h1>
-</header>
-
-<div class="page-content">
-	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
-
-	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'apexteam' ), admin_url( 'post-new.php' ) ); ?></p>
-
-	<?php elseif ( is_search() ) : ?>
-
-	<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'apexteam' ); ?></p>
-	<?php get_search_form(); ?>
-
-	<?php else : ?>
-
-	<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'apexteam' ); ?></p>
-	<?php get_search_form(); ?>
-
-	<?php endif; ?>
-</div><!-- .page-content -->
+<section id='main'>
+    <section class='post'>
+        <article>
+            <?php if (is_home() && current_user_can('publish_posts')): ?>
+                <p><?php printf(__("Pronto para criar seu primeiro post? <a href='%1$s'>Comece aqui</a>.", 'xicamais'), admin_url('post-new.php')); ?></p>
+            <?php elseif (is_search()): ?>
+                <p><?php _e('Desculpe, mas não encontramos nada. Por favor, tente uma nova busca:', 'xicamais'); ?></p>
+                <?php get_search_form(); ?>
+                <div class='clear'></div>
+            <?php else: ?>
+                <p><?php _e('Parece que não encontramos o que você estava procurando. Tente fazer uma busca:', 'xicamais'); ?></p>
+                <?php get_search_form(); ?>
+                <div class='clear'></div>
+            <?php endif; ?>
+        </article>
+    </section>
+</section>

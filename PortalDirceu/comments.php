@@ -1,68 +1,51 @@
-<?php
-/**
- * The template for displaying Comments
- *
- * The area of the page that contains comments and the comment form.
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
+<?php if (post_password_required()) return; ?>
 
-/*
- * If the current post is protected by a password and the visitor has not yet
- * entered the password we will return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
-?>
+<section id='comments' class='comments'>
+	<?php if (have_comments()): ?>
+		<span class='list-comments'>
+		    <ul>
+		        <li class='comment'>
+		        	<h3>
+		        		<?php printf(_n("<span>1</span> comentário", "<span>%s</span> comentários", get_comments_number(), 'xicamais'), number_format_i18n(get_comments_number())); ?>
+		        	</h3>
+		        </li>
 
-<div id="comments" class="comments-area">
+				<?php if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
+					<nav role='navigation'>
+						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'xicamais')); ?></div>
+						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'xicamais')); ?></div>
+					</nav>
+				<?php endif; ?>
 
-	<?php if ( have_comments() ) : ?>
+				<?php wp_list_comments(array('callback' => 'xicamais_comment', 'style' => 'ul', 'short_ping' => true, 'avatar_size'=> 76,)); ?>
 
-	<h2 class="comments-title">
-		<?php
-			printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'apexteam' ),
-				number_format_i18n( get_comments_number() ), get_the_title() );
-		?>
-	</h2>
+				<?php if (get_comment_pages_count() > 1 && get_option('page_comments')): ?>
+					<nav role='navigation'>
+						<div class='nav-previous'><?php previous_comments_link(__('Comentários antigos', 'xicamais')); ?></div>
+						<div class='nav-next'><?php next_comments_link(__('Comentários recentes', 'xicamais')); ?></div>
+					</nav>
+				<?php endif; ?>
+			</ul>
+		</span>
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'apexteam' ); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'apexteam' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'apexteam' ) ); ?></div>
-	</nav><!-- #comment-nav-above -->
-	<?php endif; // Check for comment navigation. ?>
-
-	<ol class="comment-list">
-		<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-				'avatar_size'=> 34,
-			) );
-		?>
-	</ol><!-- .comment-list -->
-
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-	<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'apexteam' ); ?></h1>
-		<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'apexteam' ) ); ?></div>
-		<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'apexteam' ) ); ?></div>
-	</nav><!-- #comment-nav-below -->
-	<?php endif; // Check for comment navigation. ?>
-
-	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments"><?php _e( 'Comments are closed.', 'apexteam' ); ?></p>
+		<?php if (!comments_open()): ?>
+			<p class='no-comments'><?php _e('Comentários não são permitidos.', 'xicamais'); ?></p>
+		<?php endif; ?>
 	<?php endif; ?>
 
-	<?php endif; // have_comments() ?>
-
-	<?php comment_form(array(
-		'comment_notes_after' => ' ',
-	)); ?>
-
-</div><!-- #comments -->
+	<span class='form'>
+		<?php
+			comment_form(array(
+				'comment_notes_before' => '',
+				'comment_notes_after' => '',
+				'fields' => array(
+					'author' => "<div class='section'><label for='author'>Nome</label><span><input id='author' name='author' type='text' aria-required='true'></span></div>",
+					'email' => "<div class='section'><label for='email'>Email</label><span><input id='email' name='email' type='text' aria-required='true'></span></div>",
+					'url' => "<div class='section'><label for='site'>Site</label><span><input id='site' name='site' type='text' aria-required='true'></span></div>",
+				),
+				'comment_field' => "<div class='section'><label for='comment'>Comentário</label><span><textarea id='comment' name='comment' cols='45' rows='8' aria-required='true'></textarea></span></div>",
+				'label_submit' => "Comentar",
+			));
+		?>
+	</span>
+</section>

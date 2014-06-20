@@ -1,3 +1,6 @@
+/*
+Theme Name: Portal Dirceu
+*/
 body {
   background: #fff; }
 
@@ -63,3 +66,8 @@ header.header {
   height: 43px;
   background: url(img/slide_shadow.png) no-repeat bottom;
   margin: 0 auto; }
+
+.da-slide {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important; }

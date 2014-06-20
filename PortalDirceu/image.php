@@ -1,79 +1,101 @@
-<?php
-/**
- * The template for displaying image attachments
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
+<?php $metadata = wp_get_attachment_metadata(); ?>
 
-// Retrieve attachment metadata.
-$metadata = wp_get_attachment_metadata();
+<?php get_header(); ?>
 
-get_header();
-?>
+<section id='main'>
+	<?php if (have_posts()): ?>
+	    <?php while (have_posts()): the_post(); ?>
+	    	<section class='post image-attachment'>
+	    	    <article>
+	    	        <section class='date'>
+	    	            <?php echo get_the_date('j'); ?> <?php echo get_the_date('M'); ?> <p><?php echo get_the_date('Y'); ?></p>
+	    	        </section>
 
-	<section id="primary" class="content-area image-attachment">
-		<div id="content" class="site-content" role="main">
+	    	    	<?php if (is_single()): ?>
+	    	            <?php the_title('<h2>', '</h2>'); ?>
+	    	        <?php else: ?>
+	    	            <?php the_title("<h2><a href='" .esc_url(get_permalink()). "' rel='bookmark'>", "</a></h2>"); ?>
+	    	        <?php endif; ?>
 
-	<?php
-		// Start the Loop.
-		while ( have_posts() ) : the_post();
-	?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	    	        <section class='author'>
+	    	            <ul class='post-categories'>
+	    	                <?php echo get_the_category_list(); ?>
+	    	            </ul>
 
-					<div class="entry-meta">
+	    	            <em>por</em> <?php echo get_the_author(); ?>
+	    	        </section>
 
-						<span class="entry-date"><time class="entry-date updated" datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>"><?php echo esc_html( get_the_date() ); ?></time></span>
+	    	        <section class='content'>
+	    	            <?php xicamais_post_thumbnail(); ?>
 
-						<span class="full-size-link"><a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?></a></span>
+	            		<?php xicamais_the_attached_image(); ?>
 
-						<span class="parent-post-link"><a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?></a></span>
-						<?php edit_post_link( __( 'Edit', 'apexteam' ), '<span class="edit-link">', '</span>' ); ?>
-					</div><!-- .entry-meta -->
-				</header><!-- .entry-header -->
+	    	            <?php if (is_search()): ?>
+	    	                <?php the_excerpt(); ?>
+	    	            <?php else: ?>
+	    	            	<?php if (has_excerpt()): ?>
+		            			<?php the_excerpt(); ?>
+	    	            	<?php endif; ?>
 
-				<div class="entry-content">
-					<div class="entry-attachment">
-						<div class="attachment">
-							<?php apexteam_the_attached_image(); ?>
-						</div><!-- .attachment -->
+	    	                <?php the_content(__('Leia Mais', 'xicamais')); ?>
+	    	                <?php
+	    	                    wp_link_pages(array(
+	    	                        'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'xicamais' ). "</span>",
+	    	                        'after'       => "</div>",
+	    	                        'link_before' => "<span>",
+	    	                        'link_after'  => "</span>",
+	    	                    ));
+	    	                ?>
+	    	            <?php endif; ?>
+	    	        </section>
 
-						<?php if ( has_excerpt() ) : ?>
-						<div class="entry-caption">
-							<?php the_excerpt(); ?>
-						</div><!-- .entry-caption -->
-						<?php endif; ?>
-					</div><!-- .entry-attachment -->
+	    	        <section class='tags'>
+	    	            <br>
+	    	            <?php the_tags("<h4>Tags:</h4>", '', "<br>"); ?>
+	    	        </section>
 
-					<?php
-						the_content();
-						wp_link_pages( array(
-							'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'apexteam' ) . '</span>',
-							'after'       => '</div>',
-							'link_before' => '<span>',
-							'link_after'  => '</span>',
-						) );
-					?>
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
+	    	        <section class='medias'>
+	    	            <?php if (!post_password_required() && (comments_open() || get_comments_number())): ?>
+	    	                <?php
+	    	                    comments_popup_link(
+	    	                        "<em>Deixe um comentário:</em> <span class='count'>0</span>",
+	    	                        "<em>Deixe um comentário:</em> <span class='count'>1</span>",
+	    	                        "<em>Deixe um comentário:</em> <span class='count'>%</span>"
+	    	                    );
+	    	                ?>
+	    	            <?php endif; ?>
+	    	        </section>
+	    	    </article>
+	    	</section>
 
-			<nav id="image-navigation" class="navigation image-navigation">
-				<div class="nav-links">
-				<?php previous_image_link( false, '<div class="previous-image">' . __( 'Previous Image', 'apexteam' ) . '</div>' ); ?>
-				<?php next_image_link( false, '<div class="next-image">' . __( 'Next Image', 'apexteam' ) . '</div>' ); ?>
-				</div><!-- .nav-links -->
-			</nav><!-- #image-navigation -->
+            <section class='author-post'>
+                <div>
+                    <? echo get_avatar(get_the_author_meta('user_email'), '90'); ?>
+                    <span>
+                        <h4><?php echo get_the_author(); ?></h4>
+                        <p><? echo get_the_author_meta('user_description'); ?></p>
+                    </span>
+                </div>
+            </section>
 
-			<?php comments_template(); ?>
+            <nav id='image-navigation' class='navigation image-navigation'>
+            	<div class='nav-links'>
+            		<?php previous_image_link(false, "<div class='previous-image'>" .__('Imagem Anterior', 'xicamais'). "</div>"); ?>
+            		<?php next_image_link(false, "<div class='next-image'>" .__('Próxima Imagem', 'xicamais'). "</div>"); ?>
+            	</div>
+            </nav>
 
-		<?php endwhile; // end of the loop. ?>
+	    	<?php if (comments_open() || get_comments_number()): ?>
+	    		<?php comments_template(); ?>
+	    	<?php endif; ?>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <?php get_template_part('content', 'none'); ?>
+    <?php endif; ?>
+</section>
 
-		</div><!-- #content -->
-	</section><!-- #primary -->
+<aside>
+	<?php get_sidebar(); ?>
+</aside>
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer();

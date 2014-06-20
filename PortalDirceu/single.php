@@ -1,70 +1,31 @@
-<?php
-/**
- * The Template for displaying all single posts
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<section id='main'>
+    <?php if (have_posts()): ?>
+        <?php while (have_posts()): the_post(); ?>
+			<?php get_template_part('content', get_post_format()); ?>
 
-<div class="blog-wrapper">
-<div class="container">
-	<div class="eleven columns">
+            <section class='author-post'>
+                <div>
+                    <? echo get_avatar(get_the_author_meta('user_email'), '90'); ?>
+                    <span>
+                        <h4><?php echo get_the_author(); ?></h4>
+                        <p><? echo get_the_author_meta('user_description'); ?></p>
+                    </span>
+                </div>
+            </section>
 
-<?php
-			if ( have_posts() ) :
-				// Start the Loop.
-				while ( have_posts() ) : the_post();
+			<?php if (comments_open() || get_comments_number()): ?>
+				<?php comments_template(); ?>
+			<?php endif; ?>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <?php get_template_part('content', 'none'); ?>
+    <?php endif; ?>
+</section>
 
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-					// Previous/next post navigation.
-					apexteam_post_nav();
+<aside>
+	<?php get_sidebar(); ?>
+</aside>
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-
-				endwhile;
-				
-
-			else :
-				// If no content, include the "No posts found" template.
-				get_template_part( 'content', 'none' );
-
-			endif;
-		?>
-		
-
-		
-
-
-	</div>
-    
-    <div class="five columns">
-    <?php get_sidebar(); ?>
-
-    
-    
-    </div>
-</div>
-
-</div>
-
-
-
-
-<?php
-get_sidebar();
-get_footer();
-
-
-
-
+<?php get_footer();

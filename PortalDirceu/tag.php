@@ -1,60 +1,30 @@
-<?php
-/**
- * The template for displaying Tag pages
- *
- * Used to display archive-type pages for posts in a tag.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<?php if (have_posts()): ?>
+	<h1>
+		<?php echo single_tag_title('', false); ?>
+	</h1>
 
-	<section id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+	<?php $term_description = term_description(); ?>
+	<?php if (!empty($term_description)): ?>
+		<span class='taxonomy-description'><?php echo $term_description ?></div>
+	<?php endif; ?>
 
-			<?php if ( have_posts() ) : ?>
+	<section id='main'>
+		<?php while (have_posts()): the_post(); ?>
+			<?php get_template_part('content', get_post_format()); ?>
+		<?php endwhile; ?>
 
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'apexteam' ), single_tag_title( '', false ) ); ?></h1>
+		<?php xicamais_paging_nav(); ?>
+	</section>
+<?php else: ?>
+	<section id='main'>
+		<?php get_template_part('content', 'none'); ?>
+	</section>
+<?php endif; ?>
 
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .archive-header -->
+<aside>
+	<?php get_sidebar(); ?>
+</aside>
 
-			<?php
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
-
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-
-					endwhile;
-					// Previous/next page navigation.
-					apexteam_paging_nav();
-
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
-
-				endif;
-			?>
-		</div><!-- #content -->
-	</section><!-- #primary -->
-
-<?php
-get_sidebar( 'content' );
-get_sidebar();
-get_footer();
+<?php get_footer();

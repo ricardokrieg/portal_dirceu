@@ -1,6 +1,11 @@
+<?php // Template Name: Left Sidebar Page ?>
 <?php get_header(); ?>
 
-<section id='main'>
+<aside class='left-sidebar'>
+	<?php get_sidebar(); ?>
+</aside>
+
+<section id='main' class='left-sidebar'>
     <?php if (is_front_page() && xicamais_has_featured_posts()): ?>
     	<?php get_template_part('featured-content'); ?>
     <?php endif; ?>
@@ -9,9 +14,5 @@
     	<?php get_template_part('content', 'page'); ?>
     <?php endwhile; ?>
 </section>
-
-<aside>
-    <?php get_sidebar(); ?>
-</aside>
 
 <?php get_footer();

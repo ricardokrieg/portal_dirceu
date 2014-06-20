@@ -1,35 +1,25 @@
-<?php
-/**
- * The template used for displaying page content
- *
- * @package WordPress
- * @subpackage Apex_Team
- * @since Apex Team 1.0
- */
-?>
+<section class='post page'>
+    <article>
+        <?php the_title('<h2>', '</h2>'); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php
-		// Page thumbnail and title.
-		apexteam_post_thumbnail();
-		the_title( '<header class="entry-header"><h2 class="entry-title">', '</h2></header><!-- .entry-header -->' );
-	?>
+        <section class='content'>
+            <?php xicamais_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-			the_content();
-			wp_link_pages( array(
-				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'apexteam' ) . '</span>',
-				'after'       => '</div>',
-				'link_before' => '<span>',
-				'link_after'  => '</span>',
-			) );
+            <?php if (is_search()): ?>
+                <?php the_excerpt(); ?>
+            <?php else: ?>
+                <?php the_content(__('Leia Mais', 'xicamais')); ?>
+                <?php
+                    wp_link_pages(array(
+                        'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'xicamais' ). "</span>",
+                        'after'       => "</div>",
+                        'link_before' => "<span>",
+                        'link_after'  => "</span>",
+                    ));
+                ?>
+            <?php endif; ?>
+        </section>
 
-			edit_post_link( __( 'Edit', 'apexteam' ), '<span class="edit-link">', '</span>' );
-		?>
-	</div><!-- .entry-content -->
-
-	<span style='display:none'>
-		<?php apexteam_posted_on(); ?>
-	</span>
-</article><!-- #post-## -->
+        <?php edit_post_link(__('Editar', 'xicamais'), "<span class='edit-link'>", "</span>"); ?>
+    </article>
+</section>
