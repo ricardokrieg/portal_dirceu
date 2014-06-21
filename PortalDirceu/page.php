@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 
+<div class='slide-container'></div>
+<div class='slide-shadow'></div>
+
 <section id='main'>
     <?php if (is_front_page() && portaldirceu_has_featured_posts()): ?>
     	<?php get_template_part('featured-content'); ?>

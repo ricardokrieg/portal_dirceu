@@ -1,6 +1,6 @@
 <section class='post page'>
     <article>
-        <?php the_title('<h2>', '</h2>'); ?>
+        <?#php the_title('<h2>', '</h2>'); ?>
 
         <section class='content'>
             <?php portaldirceu_post_thumbnail(); ?>
