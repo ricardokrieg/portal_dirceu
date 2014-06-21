@@ -216,39 +216,8 @@ function portaldirceu_planos_management() {
         'ASC' => '',
         'DESC' => '',
     );
-    if (isset($_REQUEST['orderby'])) {
-        $sql .= " ORDER BY " . $_REQUEST['orderby'] . " " . $_REQUEST['order'];
-        $option_selected[$_REQUEST['orderby']] = " selected=\"selected\"";
-        $option_selected[$_REQUEST['order']] = " selected=\"selected\"";
-    }
-    else {
-        $sql .= " ORDER BY plan_id ASC";
-        $option_selected['plan_id'] = " selected=\"selected\"";
-        $option_selected['ASC'] = " selected=\"selected\"";
-    }
-
-    if (isset($_REQUEST['paged']) && $_REQUEST['paged'] && is_numeric($_REQUEST['paged']))
-        $paged = $_REQUEST['paged'];
-    else
-        $paged = 1;
-
-    $limit_per_page = 20;
-
-
-    $total_pages = ceil($num_plans / $limit_per_page);
-
-
-    if ($paged > $total_pages) $paged = $total_pages;
 
     $admin_url = get_bloginfo('wpurl'). "/wp-admin/admin.php?page=planos";
-    if (isset($_REQUEST['orderby']))
-        $admin_url .= "&orderby=".$_REQUEST['orderby']."&order=".$_REQUEST['order'];
-
-    $page_nav = portaldirceu_planos_pagenav($total_pages, $paged, 2, 'paged', $admin_url);
-
-    $start = ($paged - 1) * $limit_per_page;
-
-    $sql .= " LIMIT {$start}, {$limit_per_page}";
 
     $plans = $wpdb->get_results($sql);
 
