@@ -108,6 +108,20 @@ footer.footer {
     }
 }
 
+.page {
+    background: white;
+
+    h2 {
+        color: white;
+        background: $green;
+        margin-left: 50%;
+        margin-top: 0;
+        font-size: 32px;
+        padding: 20px;
+        width: 50%;
+    }
+}
+
 // .slide-container {
 // }
 

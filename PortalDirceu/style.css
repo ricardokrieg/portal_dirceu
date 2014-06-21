@@ -69,6 +69,17 @@ footer.footer {
     color: #baed1f;
     text-decoration: none; }
 
+.page {
+  background: white; }
+  .page h2 {
+    color: white;
+    background: #baed1f;
+    margin-left: 50%;
+    margin-top: 0;
+    font-size: 32px;
+    padding: 20px;
+    width: 50%; }
+
 .eps-slide {
   width: 100% !important;
   max-width: 100% !important; }

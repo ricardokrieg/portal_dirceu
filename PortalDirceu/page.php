@@ -1,20 +1,31 @@
 <?php get_header(); ?>
 
-<div class='slide-container'></div>
-<div class='slide-shadow'></div>
-
 <section id='main'>
-    <?php if (is_front_page() && portaldirceu_has_featured_posts()): ?>
-    	<?php get_template_part('featured-content'); ?>
-    <?php endif; ?>
-
     <?php while (have_posts()): the_post(); ?>
-    	<?php get_template_part('content', 'page'); ?>
+    	<section class='page'>
+            <?php the_title('<h2>', '</h2>'); ?>
+
+            <section class='content'>
+                <?php portaldirceu_post_thumbnail(); ?>
+
+                <?php if (is_search()): ?>
+                    <?php the_excerpt(); ?>
+                <?php else: ?>
+                    <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
+                    <?php
+                        wp_link_pages(array(
+                            'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
+                            'after'       => "</div>",
+                            'link_before' => "<span>",
+                            'link_after'  => "</span>",
+                        ));
+                    ?>
+                <?php endif; ?>
+            </section>
+
+            <?php edit_post_link(__('Editar', 'portaldirceu'), "<span class='edit-link'>", "</span>"); ?>
+        </section>
     <?php endwhile; ?>
 </section>
-
-<aside>
-    <?php get_sidebar(); ?>
-</aside>
 
 <?php get_footer();
