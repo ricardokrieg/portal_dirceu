@@ -88,6 +88,23 @@ header.header {
     }
 }
 
+footer.footer {
+    background: $blue;
+    padding-bottom: 100px;
+
+    ul {
+        li {
+            a {
+                color: white;
+            }
+            a:hover {
+                color: $green;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
 // .slide-container {
 // }
 

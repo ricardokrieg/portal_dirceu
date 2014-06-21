@@ -58,6 +58,15 @@ header.header {
         float: left;
         background-image: url(img/menu_right_bg.png); }
 
+footer.footer {
+  background: #04789c;
+  padding-bottom: 100px; }
+  footer.footer ul li a {
+    color: white; }
+  footer.footer ul li a:hover {
+    color: #baed1f;
+    text-decoration: none; }
+
 .eps-slide {
   width: 100% !important;
   max-width: 100% !important; }
