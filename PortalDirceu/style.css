@@ -1,8 +1,11 @@
 /*
 Theme Name: Portal Dirceu
 */
+html {
+  background: #04789c; }
+
 body {
-  background: #fff; }
+  background: white; }
 
 header.header {
   background: #f6f6f7 url(img/header_shadow.png) repeat-x top left;
@@ -59,8 +62,7 @@ header.header {
         background-image: url(img/menu_right_bg.png); }
 
 footer.footer {
-  background: #04789c;
-  padding-bottom: 100px; }
+  background: #04789c; }
   footer.footer ul li a {
     color: white; }
   footer.footer ul li a:hover {

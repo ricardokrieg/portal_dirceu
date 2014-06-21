@@ -7,8 +7,12 @@ $blue: #04789c;
 
 $menu_height: 50px;
 
+html {
+    background: $blue;
+}
+
 body {
-    background: #fff;
+    background: white;
 }
 
 header.header {
@@ -90,7 +94,6 @@ header.header {
 
 footer.footer {
     background: $blue;
-    padding-bottom: 100px;
 
     ul {
         li {
