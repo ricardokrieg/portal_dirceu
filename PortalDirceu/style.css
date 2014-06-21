@@ -86,3 +86,6 @@ footer.footer {
 
 .da-slider {
   background: #baed1f url(img/slide_bg.png) repeat-x bottom !important; }
+
+.post-thumbnail img {
+  width: 100% !important; }

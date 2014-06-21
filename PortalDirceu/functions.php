@@ -597,7 +597,7 @@ $options = array (
 function mytheme_add_admin() {
     global $themename, $shortname, $options;
 
-    if ( $_GET['page'] == basename(__FILE__) ) {
+    if (array_key_exists('page', $_GET) && $_GET['page'] == basename(__FILE__)) {
         if ( 'save' == $_REQUEST['action'] ) {
             foreach ($options as $value) {
                 update_option( $value['id'], $_REQUEST[ $value['id'] ] );

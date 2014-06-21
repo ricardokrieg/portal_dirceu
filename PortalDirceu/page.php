@@ -3,11 +3,11 @@
 <section id='main'>
     <?php while (have_posts()): the_post(); ?>
     	<section class='page'>
+            <?php portaldirceu_post_thumbnail(); ?>
+
             <?php the_title('<h2>', '</h2>'); ?>
 
             <section class='content'>
-                <?php portaldirceu_post_thumbnail(); ?>
-
                 <?php if (is_search()): ?>
                     <?php the_excerpt(); ?>
                 <?php else: ?>
