@@ -68,6 +68,12 @@ footer.footer {
   footer.footer ul li a:hover {
     color: #baed1f;
     text-decoration: none; }
+  footer.footer ul li:after {
+    color: white;
+    margin-left: 10px;
+    content: '/'; }
+  footer.footer ul li:last-child:after {
+    content: none; }
 
 .page {
   background: white; }
