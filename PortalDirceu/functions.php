@@ -90,6 +90,8 @@ function portaldirceu_setup() {
 
 	require_once dirname(__FILE__) . '/inc/class-tgm-plugin-activation.php';
 	add_action('tgmpa_register', 'portal_dirceu_register_required_plugins');
+
+	require_once dirname(__FILE__) . '/inc/planos.php';
 }
 endif; // portaldirceu_setup
 
