@@ -1,11 +1,8 @@
 /*
 Theme Name: Portal Dirceu
 */
-html {
-  background: #04789c; }
-
 body {
-  background: white; }
+  background: #f6f6f7; }
 
 header.header {
   background: #f6f6f7 url(img/header_shadow.png) repeat-x top left;
@@ -60,23 +57,32 @@ header.header {
       float: left;
       background-image: url(img/menu_right_bg.png); }
 
-footer.footer {
-  background: #04789c; }
-  footer.footer ul li a {
-    color: white; }
-  footer.footer ul li a:hover {
-    color: #baed1f;
-    text-decoration: none; }
-  footer.footer ul li:after {
-    color: white;
-    margin-left: 10px;
-    content: '/'; }
-  footer.footer ul li:last-child:after {
-    content: none; }
+.footer-shadow {
+  width: 1140px;
+  height: 48px;
+  background: url(img/footer_shadow.png) no-repeat; }
 
-.page {
+footer.footer {
+  background: #04789c;
+  min-height: 250px; }
+  footer.footer .menu-rodape-container {
+    text-align: center;
+    padding-top: 70px; }
+    footer.footer .menu-rodape-container ul li a {
+      color: white; }
+    footer.footer .menu-rodape-container ul li a:hover {
+      color: #baed1f;
+      text-decoration: none; }
+    footer.footer .menu-rodape-container ul li:after {
+      color: white;
+      margin-left: 10px;
+      content: '/'; }
+    footer.footer .menu-rodape-container ul li:last-child:after {
+      content: none; }
+
+section.page {
   background: white; }
-  .page h2 {
+  section.page h2 {
     color: white;
     background: #baed1f;
     margin-left: 50%;

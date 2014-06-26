@@ -4,19 +4,16 @@ Theme Name: Portal Dirceu
 
 $green: #baed1f;
 $blue: #04789c;
+$ice_white: #f6f6f7;
 
 $menu_height: 50px;
 
-html {
-    background: $blue;
-}
-
 body {
-    background: white;
+    background: $ice_white;
 }
 
 header.header {
-    background: #f6f6f7 url(img/header_shadow.png) repeat-x top left;
+    background: $ice_white url(img/header_shadow.png) repeat-x top left;
     padding-top: 70px;
     position: relative;
 
@@ -89,31 +86,43 @@ header.header {
     }
 }
 
+.footer-shadow {
+    width: 1140px;
+    height: 48px;
+    background: url(img/footer_shadow.png) no-repeat;
+}
+
 footer.footer {
     background: $blue;
+    min-height: 250px;
 
-    ul {
-        li {
-            a {
+    .menu-rodape-container {
+        text-align: center;
+        padding-top: 70px;
+
+        ul {
+            li {
+                a {
+                    color: white;
+                }
+                a:hover {
+                    color: $green;
+                    text-decoration: none;
+                }
+            }
+            li:after {
                 color: white;
+                margin-left: 10px;
+                content: '/';
             }
-            a:hover {
-                color: $green;
-                text-decoration: none;
+            li:last-child:after {
+                content: none;
             }
-        }
-        li:after {
-            color: white;
-            margin-left: 10px;
-            content: '/';
-        }
-        li:last-child:after {
-            content: none;
         }
     }
 }
 
-.page {
+section.page {
     background: white;
 
     h2 {
