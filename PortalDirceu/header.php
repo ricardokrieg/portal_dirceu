@@ -35,8 +35,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header class='header'>
-        <div class='container'>
+    <div class='container'>
+        <header class='header'>
             <h1 class='branding'>
                 <a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
                     <?php if (get_theme_mod('portaldirceu_logo')): ?>
@@ -50,5 +50,4 @@
             <span class='logo-bg'></span>
 
             <?php wp_nav_menu(array('theme_location' => 'principal', 'menu_class' => 'list-inline', 'items_wrap' => '<span class="menu-left-bg"></span><ul id="%1$s" class="%2$s">%3$s</ul><span class="menu-right-bg"></span>')); ?>
-        </div>
-    </header>
+        </header>
