@@ -95,7 +95,7 @@ header.header {
     height: 48px;
     background: $blue;
     background-repeat: no-repeat;
-    margin-top: 40px;
+    margin-top: 25px;
     position: relative;
 }
 
@@ -176,8 +176,12 @@ footer.footer {
     }
 }
 
+#main {
+    background: white url(img/page_bottom.png) no-repeat center bottom;
+    padding-bottom: 63px;
+}
+
 section.page {
-    background: white;
     margin-top: 35px;
 
     .page-title-container {

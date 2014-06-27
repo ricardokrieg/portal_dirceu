@@ -65,7 +65,7 @@ header.header {
   height: 48px;
   background: #04789c;
   background-repeat: no-repeat;
-  margin-top: 40px;
+  margin-top: 25px;
   position: relative; }
 
 @media (min-width: 768px) {
@@ -114,8 +114,11 @@ footer.footer {
     content: '/'; }
   footer.footer .menu-rodape-container ul li:last-child:after {
     content: none; } }
+#main {
+  background: white url(img/page_bottom.png) no-repeat center bottom;
+  padding-bottom: 63px; }
+
 section.page {
-  background: white;
   margin-top: 35px; }
   section.page .page-title-container {
     background: url(img/title_shadow.png) no-repeat left bottom;
