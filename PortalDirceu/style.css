@@ -45,6 +45,7 @@ header.header {
       header.header .menu-menu-principal-container ul li a:hover {
         text-decoration: none; }
       header.header .menu-menu-principal-container ul li:hover a {
+        color: #404040;
         background: url(img/menu_active_bg.png) repeat-x #baed1f;
         height: 40px;
         border-bottom-left-radius: 4px;

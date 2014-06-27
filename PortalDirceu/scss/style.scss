@@ -66,6 +66,7 @@ header.header {
             }
             li:hover {
                 a {
+                    color: lighten(black, 25%);
                     background: url(img/menu_active_bg.png) repeat-x $green;
                     height: $menu_height - 10px;
                     border-bottom-left-radius: 4px;
