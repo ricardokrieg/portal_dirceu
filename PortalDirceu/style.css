@@ -115,7 +115,8 @@ footer.footer {
   footer.footer .menu-rodape-container ul li:last-child:after {
     content: none; } }
 section.page {
-  background: white; }
+  background: white;
+  margin-top: 35px; }
   section.page .page-title-container {
     background: url(img/title_shadow.png) no-repeat left bottom;
     margin-left: 50%;
@@ -138,6 +139,7 @@ section.page {
 
 .post-thumbnail {
   background: url(img/thumbnail_shadow.png) no-repeat center bottom;
-  padding-bottom: 35px; }
+  padding-bottom: 35px;
+  margin-top: -35px; }
   .post-thumbnail img {
     width: 100% !important; }

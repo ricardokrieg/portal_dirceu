@@ -178,6 +178,7 @@ footer.footer {
 
 section.page {
     background: white;
+    margin-top: 35px;
 
     .page-title-container {
         background: url(img/title_shadow.png) no-repeat left bottom;
@@ -218,6 +219,7 @@ section.page {
 .post-thumbnail {
     background: url(img/thumbnail_shadow.png) no-repeat center bottom;
     padding-bottom: 35px;
+    margin-top: -35px;
 
     img {
         width: 100% !important;
