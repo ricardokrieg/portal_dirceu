@@ -42,7 +42,7 @@
                     <?php if (get_theme_mod('portaldirceu_logo')): ?>
                         <img src="<?php echo esc_url(get_theme_mod('portaldirceu_logo')); ?>" />
                     <?php else: ?>
-                        <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
+                        <img src="<?php echo get_bloginfo('template_directory') . '/img/logo.png' ?>" />
                     <?php endif; ?>
                 </a>
             </h1>
