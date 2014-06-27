@@ -12,15 +12,20 @@ body {
     background: $ice_white;
 }
 
+.container.with-padding {
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+}
+
 header.header {
     background: $ice_white url(img/header_shadow.png) repeat-x top left;
-    padding-top: 70px;
-    position: relative;
+    padding-top: 40px;
 
     h1.branding {
         position: absolute;
-        left: 117px;
-        bottom: -87px;
+        left: 127px;
+        bottom: -43px;
         z-index: 3;
     }
 
@@ -30,8 +35,8 @@ header.header {
         background: url(img/logo_bg.png) no-repeat;
         display: block;
         position: absolute;
-        left: 0;
-        bottom: -100px;
+        left: 60px;
+        bottom: -50px;
         z-index: 2;
     }
 
@@ -174,14 +179,20 @@ footer.footer {
 section.page {
     background: white;
 
-    h2 {
-        color: white;
-        background: $green;
+    .page-title-container {
+        background: url(img/title_shadow.png) no-repeat left bottom;
         margin-left: 50%;
-        margin-top: 0;
-        font-size: 32px;
-        padding: 20px;
+        margin-top: -35px;
         width: 50%;
+        padding-bottom: 12px;
+
+        h2 {
+            color: white;
+            background: $green;
+            font-size: 32px;
+            padding: 20px;
+            margin-top: -35px;
+        }
     }
 }
 
@@ -205,6 +216,9 @@ section.page {
 }
 
 .post-thumbnail {
+    background: url(img/thumbnail_shadow.png) no-repeat center bottom;
+    padding-bottom: 35px;
+
     img {
         width: 100% !important;
     }

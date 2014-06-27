@@ -1,31 +1,33 @@
 <?php get_header(); ?>
 
-<section id='main'>
-    <?php while (have_posts()): the_post(); ?>
-    	<section class='page'>
-            <?php portaldirceu_post_thumbnail(); ?>
+<div class='container'>
+    <section id='main'>
+        <?php while (have_posts()): the_post(); ?>
+        	<section class='page'>
+                <?php portaldirceu_post_thumbnail(); ?>
 
-            <?php the_title('<h2>', '</h2>'); ?>
+                <?php the_title('<div class="page-title-container"><h2>', '</h2></div>'); ?>
 
-            <section class='content'>
-                <?php if (is_search()): ?>
-                    <?php the_excerpt(); ?>
-                <?php else: ?>
-                    <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-                    <?php
-                        wp_link_pages(array(
-                            'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
-                            'after'       => "</div>",
-                            'link_before' => "<span>",
-                            'link_after'  => "</span>",
-                        ));
-                    ?>
-                <?php endif; ?>
+                <section class='content'>
+                    <?php if (is_search()): ?>
+                        <?php the_excerpt(); ?>
+                    <?php else: ?>
+                        <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
+                        <?php
+                            wp_link_pages(array(
+                                'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
+                                'after'       => "</div>",
+                                'link_before' => "<span>",
+                                'link_after'  => "</span>",
+                            ));
+                        ?>
+                    <?php endif; ?>
+                </section>
+
+                <?php edit_post_link(__('Editar', 'portaldirceu'), "<span class='edit-link'>", "</span>"); ?>
             </section>
-
-            <?php edit_post_link(__('Editar', 'portaldirceu'), "<span class='edit-link'>", "</span>"); ?>
-        </section>
-    <?php endwhile; ?>
-</section>
+        <?php endwhile; ?>
+    </section>
+</div>
 
 <?php get_footer();

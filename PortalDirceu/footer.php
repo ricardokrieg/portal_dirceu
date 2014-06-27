@@ -1,3 +1,4 @@
+    <div class='container'>
         <div class='footer-shadow'>
             <div class='logo-footer'></div>
         </div>
@@ -7,6 +8,6 @@
         </footer>
 
         <?php wp_footer(); ?>
-    </div> <!-- container -->
+    </div>
 </body>
 </html>
