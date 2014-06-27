@@ -87,9 +87,30 @@ header.header {
 }
 
 .footer-shadow {
-    width: 1140px;
     height: 48px;
-    background: url(img/footer_shadow.png) no-repeat;
+    background: $blue;
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .footer-shadow {
+        width: 720px;
+        background: url(img/footer_shadow_720.png);
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-shadow {
+        width: 940px;
+        background: url(img/footer_shadow_940.png);
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-shadow {
+        width: 1140px;
+        background: url(img/footer_shadow.png);
+    }
 }
 
 footer.footer {
