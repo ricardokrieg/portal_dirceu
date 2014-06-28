@@ -142,6 +142,9 @@ footer.footer {
         padding-top: 70px;
 
         ul {
+            position: relative;
+            display: inline;
+
             li {
                 display: list-item;
 
@@ -155,6 +158,13 @@ footer.footer {
             }
         }
     }
+
+    .social-icons {
+        position: absolute;
+        display: inline;
+        top: -8px;
+        margin-left: 25px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -164,12 +174,12 @@ footer.footer {
                 li {
                     display: inline-block;
                 }
-                li:after {
+                li:before {
                     color: white;
-                    margin-left: 10px;
+                    margin-right: 10px;
                     content: '/';
                 }
-                li:last-child:after {
+                li:first-child:before {
                     content: none;
                 }
             }
