@@ -97,7 +97,7 @@ footer.footer {
   min-height: 250px; }
   footer.footer .menu-rodape-container {
     text-align: center;
-    padding-top: 70px; }
+    padding-top: 40px; }
     footer.footer .menu-rodape-container ul {
       position: relative;
       display: inline; }
@@ -109,20 +109,23 @@ footer.footer {
           color: #baed1f;
           text-decoration: none; }
   footer.footer .social-icons {
-    position: absolute;
-    display: inline;
-    top: -8px;
     margin-left: 25px; }
 
 @media (min-width: 768px) {
-  footer.footer .menu-rodape-container ul li {
-    display: inline-block; }
-  footer.footer .menu-rodape-container ul li:before {
-    color: white;
-    margin-right: 10px;
-    content: '/'; }
-  footer.footer .menu-rodape-container ul li:first-child:before {
-    content: none; } }
+  footer.footer .menu-rodape-container {
+    padding-top: 70px; }
+    footer.footer .menu-rodape-container ul li {
+      display: inline-block; }
+    footer.footer .menu-rodape-container ul li:before {
+      color: white;
+      margin-right: 10px;
+      content: '/'; }
+    footer.footer .menu-rodape-container ul li:first-child:before {
+      content: none; }
+  footer.footer .social-icons {
+    position: absolute;
+    display: inline;
+    top: -8px; } }
 #main {
   background: white url(img/page_bottom.png) no-repeat center bottom;
   padding-bottom: 63px; }
