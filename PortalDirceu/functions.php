@@ -816,6 +816,16 @@ function portal_dirceu_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => '',
         ),
+        array(
+            'name'               => 'Easy Social Icons',
+            'slug'               => 'easy-social-icons',
+            'source'             => get_stylesheet_directory() . '/plugins/easy-social-icons.zip',
+            'required'           => true,
+            'version'            => '',
+            'force_activation'   => true,
+            'force_deactivation' => false,
+            'external_url'       => '',
+        ),
     );
 
     $config = array(
