@@ -541,7 +541,7 @@ if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow
 	require get_template_directory() . '/inc/featured-content.php';
 }
 
-remove_filter('the_content', 'wpautop');
+// remove_filter('the_content', 'wpautop');
 
 
 /*special freaturs */
