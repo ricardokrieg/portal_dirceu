@@ -826,6 +826,16 @@ function portal_dirceu_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => '',
         ),
+        array(
+            'name'               => 'Contact Form 7',
+            'slug'               => 'contact-form-7',
+            'source'             => get_stylesheet_directory() . '/plugins/contact-form-7.zip',
+            'required'           => true,
+            'version'            => '',
+            'force_activation'   => true,
+            'force_deactivation' => false,
+            'external_url'       => '',
+        ),
     );
 
     $config = array(
