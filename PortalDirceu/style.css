@@ -168,7 +168,7 @@ section.page {
   border-bottom-left-radius: 4px;
   cursor: pointer; }
 .wpcf7-form .wpcf7-form-control-wrap {
-  display: block;
+  display: block !important;
   overflow: hidden; }
 .wpcf7-form .esquerda .wpcf7-form-control-wrap {
   width: 50%;
@@ -186,5 +186,26 @@ section.page {
   border-bottom-right-radius: 4px;
   margin-bottom: 10px;
   padding-left: 8px; }
+.wpcf7-form [type=submit] {
+  float: right;
+  background: url(img/submit.png) no-repeat bottom right;
+  border: none;
+  font-weight: bold;
+  width: 140px;
+  height: 36px;
+  font-size: 18px;
+  margin: 40px; }
+  .wpcf7-form [type=submit]:hover {
+    color: #9bc910;
+    background-image: url(img/submit_hover.png); }
+.wpcf7-form .wpcf7-not-valid-tip {
+  display: table-cell; }
+.wpcf7-form .wpcf7-validation-errors {
+  display: inline-block; }
 .wpcf7-form br {
   display: none; }
+
+.wpcf7-form.invalid .wpcf7-text {
+  margin-bottom: 36px; }
+.wpcf7-form.invalid .wpcf7-text[aria-required=true] {
+  margin-bottom: 10px; }
