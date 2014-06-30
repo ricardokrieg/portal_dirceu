@@ -1,21 +1,19 @@
 <?php get_header(); ?>
 
-<h1><?php _e('Não Encontrado', 'portaldirceu'); ?></h1>
+<div class='container'>
+    <section id='main'>
+        <section class='page'>
+            <div class="page-title-container"><h2><?php _e('Não Encontrado', 'portaldirceu'); ?></h2></div>
 
-<section id='main'>
-	<section class='post'>
-		<article>
-			<section class='content'>
-				<p><?php _e('Parece que não encontramos nada nesta página. Experimente procurar algo:', 'portaldirceu'); ?></p>
+            <section class='content'>
+                <div class='container with-padding'>
+                    <p><?php _e('Parece que a página que você está procurando não existe.', 'portaldirceu'); ?></p>
 
-				<?php get_search_form(); ?>
-			</section>
-		</article>
-	</section>
-</section>
-
-<aside>
-	<?php get_sidebar('content'); ?>
-</aside>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">Voltar para a Página Inicial</a>
+                </div>
+            </section>
+        </section>
+    </section>
+</div>
 
 <?php get_footer();

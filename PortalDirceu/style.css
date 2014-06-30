@@ -3,6 +3,10 @@ Theme Name: Portal Dirceu
 */
 body {
   background: #f6f6f7; }
+  body a {
+    color: #9bc910; }
+  body a:hover {
+    color: #baed1f; }
 
 .container.with-padding {
   padding-left: 60px;

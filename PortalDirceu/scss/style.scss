@@ -11,6 +11,13 @@ $menu_height: 50px;
 
 body {
     background: $ice_white;
+
+    a {
+        color: darken($green, 10%);
+    }
+    a:hover {
+        color: $green;
+    }
 }
 
 .container.with-padding {
