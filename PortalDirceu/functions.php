@@ -148,54 +148,64 @@ function portaldirceu_has_featured_posts() {
 
 function portaldirceu_widgets_init() {
 	register_sidebar(array(
-		'name'          => __('Página Inicial', 'portaldirceu'),
-		'id'            => 'sidebar-home',
-		'description'   => __('Aparece apenas na página inicial do site.', 'portaldirceu'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name'          => __('Topo', 'portaldirceu'),
-		'id'            => 'sidebar-header',
-		'description'   => __('Parte Superior do site, ao lado da logo.', 'portaldirceu'),
-		'before_widget' => '<span id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</span>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name'          => __('Barra Lateral', 'portaldirceu'),
-		'id'            => 'sidebar-lateral',
-		'description'   => __('Barra lateral do site', 'portaldirceu'),
-		'before_widget' => '<span id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</span>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name'          => __('Rodapé', 'portaldirceu'),
-		'id'            => 'sidebar-rodape',
-		'description'   => __('Rodapé do site', 'portaldirceu'),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	));
-
-	register_sidebar(array(
-		'name'          => __('Abaixo do Rodapé', 'portaldirceu'),
-		'id'            => 'sidebar-rodape-below',
-		'description'   => __('Abaixo do rodapé do site', 'portaldirceu'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'name'          => __('Mapa', 'portaldirceu'),
+		'id'            => 'widget-map',
+		'description'   => __('Inserir o mapa neste widget', 'portaldirceu'),
+		'before_widget' => '<div class="post-thumbnail contact-map">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
+		'before_title'  => '',
+		'after_title'   => '',
 	));
+
+	// register_sidebar(array(
+	// 	'name'          => __('Página Inicial', 'portaldirceu'),
+	// 	'id'            => 'sidebar-home',
+	// 	'description'   => __('Aparece apenas na página inicial do site.', 'portaldirceu'),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h3>',
+	// 	'after_title'   => '</h3>',
+	// ));
+
+	// register_sidebar(array(
+	// 	'name'          => __('Topo', 'portaldirceu'),
+	// 	'id'            => 'sidebar-header',
+	// 	'description'   => __('Parte Superior do site, ao lado da logo.', 'portaldirceu'),
+	// 	'before_widget' => '<span id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</span>',
+	// 	'before_title'  => '<h3>',
+	// 	'after_title'   => '</h3>',
+	// ));
+
+	// register_sidebar(array(
+	// 	'name'          => __('Barra Lateral', 'portaldirceu'),
+	// 	'id'            => 'sidebar-lateral',
+	// 	'description'   => __('Barra lateral do site', 'portaldirceu'),
+	// 	'before_widget' => '<span id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</span>',
+	// 	'before_title'  => '<h3>',
+	// 	'after_title'   => '</h3>',
+	// ));
+
+	// register_sidebar(array(
+	// 	'name'          => __('Rodapé', 'portaldirceu'),
+	// 	'id'            => 'sidebar-rodape',
+	// 	'description'   => __('Rodapé do site', 'portaldirceu'),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h3>',
+	// 	'after_title'   => '</h3>',
+	// ));
+
+	// register_sidebar(array(
+	// 	'name'          => __('Abaixo do Rodapé', 'portaldirceu'),
+	// 	'id'            => 'sidebar-rodape-below',
+	// 	'description'   => __('Abaixo do rodapé do site', 'portaldirceu'),
+	// 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</div>',
+	// 	'before_title'  => '<h3>',
+	// 	'after_title'   => '</h3>',
+	// ));
 }
 
 add_action('widgets_init', 'portaldirceu_widgets_init');

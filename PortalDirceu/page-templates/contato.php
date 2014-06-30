@@ -5,9 +5,9 @@
     <section id='main'>
         <?php while (have_posts()): the_post(); ?>
             <section class='page'>
-                <div class='post-thumbnail'>
-                    <?php do_shortcode('[bgmp-map]'); ?>
-                </div>
+                <?php if (is_active_sidebar('widget-map')): ?>
+                    <?php dynamic_sidebar('widget-map'); ?>
+                <?php endif; ?>
 
                 <?php the_title('<div class="page-title-container"><h2>', '</h2></div>'); ?>
 

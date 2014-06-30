@@ -224,3 +224,10 @@ section.page {
   margin-bottom: 36px; }
 .wpcf7-form.invalid .wpcf7-text[aria-required=true] {
   margin-bottom: 10px; }
+
+.gmw-thumbnail-map img {
+  width: 1140px;
+  height: 335px; }
+
+.post-thumbnail.contact-map {
+  padding-bottom: 25px; }
