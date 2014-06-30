@@ -92,7 +92,8 @@ function portaldirceu_setup() {
 	require_once dirname(__FILE__) . '/inc/class-tgm-plugin-activation.php';
 	add_action('tgmpa_register', 'portal_dirceu_register_required_plugins');
 
-	// require_once dirname(__FILE__) . '/inc/planos.php';
+	require_once dirname(__FILE__) . '/plugins/portaldirceu-faq/index.php';
+	require_once dirname(__FILE__) . '/plugins/portaldirceu-planos/index.php';
 }
 endif; // portaldirceu_setup
 
@@ -859,9 +860,9 @@ function portal_dirceu_register_required_plugins() {
             'external_url'       => '',
         ),
         array(
-            'name'               => 'Krieg FAQ',
-            'slug'               => 'krieg-faq',
-            'source'             => get_stylesheet_directory() . '/plugins/krieg-faq.zip',
+            'name'               => 'Advanced Custom Fields',
+            'slug'               => 'advanced-custom-fields',
+            'source'             => get_stylesheet_directory() . '/plugins/advanced-custom-fields.zip',
             'required'           => true,
             'version'            => '',
             'force_activation'   => true,
