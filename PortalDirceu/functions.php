@@ -903,3 +903,14 @@ function portal_dirceu_register_required_plugins() {
 
     tgmpa($plugins, $config);
 }
+
+function parse_slide_shortcode($attrs) {
+	extract(shortcode_atts(array('id' => null), $attrs));
+
+	if ($id == null) return;
+
+	global $global_slide_id;
+	$global_slide_id = $id;
+}
+
+add_shortcode('slide', 'parse_slide_shortcode');

@@ -14,14 +14,6 @@
                             <?php the_excerpt(); ?>
                         <?php else: ?>
                             <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-                            <?php
-                                wp_link_pages(array(
-                                    'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
-                                    'after'       => "</div>",
-                                    'link_before' => "<span>",
-                                    'link_after'  => "</span>",
-                                ));
-                            ?>
                         <?php endif; ?>
 
                         <div class='edit-link'>

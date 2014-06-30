@@ -44,7 +44,7 @@ add_action('init', 'portaldirceu_faq_init');
 
 function portaldirceu_faq_shortcode() {
     // Getting FAQs from WordPress plugin's Custom Post Type questions
-    $args = array('posts_per_page' => -1, 'post_type' => 'faq', 'orderby' => 'menu_order');
+    $args = array('posts_per_page' => -1, 'post_type' => 'faq', 'orderby' => 'menu_order', 'order' => 'ASC');
     $query = new WP_Query($args);
 
     global $faq;

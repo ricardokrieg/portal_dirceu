@@ -5,24 +5,16 @@
     <section id='main'>
         <?php while (have_posts()): the_post(); ?>
             <section class='page'>
-                <?php portaldirceu_post_thumbnail(); ?>
-
-                <?php the_title('<div class="page-title-container"><h2>', '</h2></div>'); ?>
+                <?php apply_filters('the_content', get_the_content()); ?>
+                <?php if (isset($global_slide_id)) echo do_shortcode("[epsshortcode id=" .$global_slide_id. "]") ?>
 
                 <section class='content'>
-                    <div class='container with-padding'>
+                    <div class='container no-padding'>
                         <?php if (is_search()): ?>
                             <?php the_excerpt(); ?>
                         <?php else: ?>
                             <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-                            <?php
-                                wp_link_pages(array(
-                                    'before'      => "<div class='page-links'><span class='page-links-title'>" .__('Páginas:', 'portaldirceu' ). "</span>",
-                                    'after'       => "</div>",
-                                    'link_before' => "<span>",
-                                    'link_after'  => "</span>",
-                                ));
-                            ?>
+
                         <?php endif; ?>
 
                         <div class='edit-link'>

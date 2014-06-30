@@ -43,7 +43,7 @@ function portaldirceu_planos_init() {
 add_action('init', 'portaldirceu_planos_init');
 
 function portaldirceu_planos_shortcode() {
-    $args = array('posts_per_page' => -1, 'post_type' => 'portaldirceu-plano', 'orderby' => 'menu_order');
+    $args = array('posts_per_page' => -1, 'post_type' => 'portaldirceu-plano', 'orderby' => 'menu_order', 'order' => 'ASC');
     $query = new WP_Query($args);
 ?>
 
@@ -53,9 +53,15 @@ function portaldirceu_planos_shortcode() {
             while ($query->have_posts()):
                 $query->the_post();
     ?>
-                <div id="plano-<?php echo get_the_ID(); ?>" class='plano'>
+                <div id="plano-<?php echo get_the_ID(); ?>" class='plano' style="background-color: <?php echo get_field('plano-cor') ?>">
                     <?php echo get_the_title(); ?>
-                    <?php echo get_the_content(); ?>
+                    <?php list($dollar, $cent) = explode('.', money_format('%n', get_field('plano-valor'))) ?>
+
+                    <div class='value'>
+                        <span class='rs'>R$</span>
+                        <span class='dollar'><?php echo $dollar ?></span>
+                        <span class='cent'><?php echo $cent ?></span>
+                    </div>
                 </div>
     <?php
             endwhile;
