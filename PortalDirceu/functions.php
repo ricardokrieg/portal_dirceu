@@ -246,13 +246,15 @@ function portaldirceu_scripts() {
 	wp_enqueue_style('portaldirceu-lato', portaldirceu_font_url(), array(), null);
 
 	// Add Genericons font, used in the main stylesheet.
-	wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2');
+	// wp_enqueue_style('genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.2');
 
 	// Load our main stylesheet.
-	wp_enqueue_style('portaldirceu-style', get_stylesheet_uri(), array('genericons'));
+	// wp_enqueue_style('portaldirceu-style', get_stylesheet_uri(), array('genericons'));
+	wp_enqueue_style('portaldirceu-style', get_stylesheet_uri());
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style('portaldirceu-ie', get_template_directory_uri() . '/css/ie.css', array('portaldirceu-style', 'genericons'), '20131205');
+	// wp_enqueue_style('portaldirceu-ie', get_template_directory_uri() . '/css/ie.css', array('portaldirceu-style', 'genericons'), '20131205');
+	wp_enqueue_style('portaldirceu-ie', get_template_directory_uri() . '/css/ie.css', array('portaldirceu-style'));
 	wp_style_add_data('portaldirceu-ie', 'conditional', 'lt IE 9');
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -275,7 +277,7 @@ function portaldirceu_scripts() {
 		));
 	}
 
-	wp_enqueue_script('portaldirceu-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20131209', true);
+	// wp_enqueue_script('portaldirceu-script', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20131209', true);
 }
 
 add_action('wp_enqueue_scripts', 'portaldirceu_scripts');
