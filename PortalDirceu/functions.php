@@ -856,6 +856,16 @@ function portal_dirceu_register_required_plugins() {
             'force_deactivation' => false,
             'external_url'       => '',
         ),
+        array(
+            'name'               => 'Krieg FAQ',
+            'slug'               => 'krieg-faq',
+            'source'             => get_stylesheet_directory() . '/plugins/krieg-faq.zip',
+            'required'           => true,
+            'version'            => '',
+            'force_activation'   => true,
+            'force_deactivation' => false,
+            'external_url'       => '',
+        ),
     );
 
     $config = array(
