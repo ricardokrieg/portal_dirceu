@@ -355,3 +355,24 @@ section.page {
 .post-thumbnail.contact-map {
     padding-bottom: 25px;
 }
+
+#faq {
+    .panel-default, .panel-heading {
+        border: none;
+        background: none;
+    }
+
+    h4.panel-title {
+        a {
+            background: url(img/submit_gray.png) no-repeat left bottom;
+            text-transform: uppercase;
+            padding-left: 60px;
+            display: block;
+            height: 36px;
+            line-height: 36px;
+        }
+        a:hover, a.open {
+            background-image: url(img/submit.png);
+        }
+    }
+}
