@@ -186,8 +186,8 @@ section.page {
   background: url(img/thumbnail_shadow.png) no-repeat center bottom;
   padding-bottom: 35px;
   position: relative; }
-  .post-thumbnail img {
-    width: 100% !important; }
+  .post-thumbnail.no-shadow {
+    background: none; }
 
 .wpcf7-form label {
   background: #e6e6e6;

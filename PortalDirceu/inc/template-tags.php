@@ -151,7 +151,7 @@ add_action( 'save_post',     'portaldirceu_category_transient_flusher' );
  *
  * @return void
 */
-function portaldirceu_post_thumbnail() {
+function portaldirceu_post_thumbnail($klass='') {
 	if (post_password_required() || !has_post_thumbnail()) {
 		return;
 	}
@@ -159,13 +159,13 @@ function portaldirceu_post_thumbnail() {
 	if (is_singular()):
 	?>
 
-	<div class='post-thumbnail'>
+	<div class="post-thumbnail <?php echo $klass ?>">
 		<?php the_post_thumbnail('full'); ?>
 	</div>
 
 	<?php else: ?>
 
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
+	<a class="post-thumbnail <?php echo $klass ?>" href="<?php the_permalink(); ?>">
 		<?php the_post_thumbnail('full'); ?>
 	</a>
 

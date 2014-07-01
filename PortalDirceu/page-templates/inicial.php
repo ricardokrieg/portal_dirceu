@@ -17,12 +17,9 @@
                             <?php the_excerpt(); ?>
                         <?php else: ?>
                             <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-
                         <?php endif; ?>
 
-                        <div class='edit-link'>
-                            <?php edit_post_link(__('Editar', 'portaldirceu'), "<span class='edit-link'>", "</span>"); ?>
-                        </div>
+                        <?php portaldirceu_post_thumbnail('no-shadow'); ?>
                     </div>
                 </section>
             </section>

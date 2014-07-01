@@ -268,8 +268,8 @@ section.page {
     padding-bottom: 35px;
     position: relative;
 
-    img {
-        width: 100% !important;
+    &.no-shadow {
+        background: none;
     }
 }
 
