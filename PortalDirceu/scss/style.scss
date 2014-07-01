@@ -209,23 +209,23 @@ footer.footer {
     padding-bottom: 63px;
 }
 
-section.page {
-    margin-top: 35px;
+// section.page {
+//     margin-top: 35px;
+// }
 
-    .page-title-container {
-        background: url(img/title_shadow.png) no-repeat left bottom;
-        margin-left: 50%;
+.page-title-container {
+    background: url(img/title_shadow.png) no-repeat left bottom;
+    margin-left: 50%;
+    margin-top: -35px;
+    width: 50%;
+    padding-bottom: 12px;
+
+    h2 {
+        color: white;
+        background: $green;
+        font-size: 32px;
+        padding: 20px;
         margin-top: -35px;
-        width: 50%;
-        padding-bottom: 12px;
-
-        h2 {
-            color: white;
-            background: $green;
-            font-size: 32px;
-            padding: 20px;
-            margin-top: -35px;
-        }
     }
 }
 
@@ -243,6 +243,8 @@ section.page {
 
 .da-slider {
     background-color: rgba(0, 0, 0, 0) !important;
+    overflow: visible !important;
+    // overflow-x: hidden !important;
 }
 
 .da-slide div.da-slide-content {
@@ -256,7 +258,7 @@ section.page {
 .post-thumbnail {
     background: url(img/thumbnail_shadow.png) no-repeat center bottom;
     padding-bottom: 35px;
-    margin-top: -35px;
+    // margin-top: -35px;
 
     img {
         width: 100% !important;

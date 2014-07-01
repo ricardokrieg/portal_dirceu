@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
-<div class='container'>
-    <section id='main'>
-        <?php while (have_posts()): the_post(); ?>
+<?php while (have_posts()): the_post(); ?>
+    <?php portaldirceu_post_thumbnail(); ?>
+
+    <?php the_title('<div class="page-title-container"><h2>', '</h2></div>'); ?>
+
+    <div class='container'>
+        <section id='main'>
             <section class='page'>
-                <?php portaldirceu_post_thumbnail(); ?>
-
-                <?php the_title('<div class="page-title-container"><h2>', '</h2></div>'); ?>
-
                 <section class='content'>
                     <div class='container with-padding'>
                         <?php if (is_search()): ?>
@@ -22,8 +22,8 @@
                     </div>
                 </section>
             </section>
-        <?php endwhile; ?>
-    </section>
-</div>
+        </section>
+    </div>
+<?php endwhile; ?>
 
 <?php get_footer();

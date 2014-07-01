@@ -138,20 +138,18 @@ footer.footer {
   background: white url(img/page_bottom.png) no-repeat center bottom;
   padding-bottom: 63px; }
 
-section.page {
-  margin-top: 35px; }
-  section.page .page-title-container {
-    background: url(img/title_shadow.png) no-repeat left bottom;
-    margin-left: 50%;
-    margin-top: -35px;
-    width: 50%;
-    padding-bottom: 12px; }
-    section.page .page-title-container h2 {
-      color: white;
-      background: #baed1f;
-      font-size: 32px;
-      padding: 20px;
-      margin-top: -35px; }
+.page-title-container {
+  background: url(img/title_shadow.png) no-repeat left bottom;
+  margin-left: 50%;
+  margin-top: -35px;
+  width: 50%;
+  padding-bottom: 12px; }
+  .page-title-container h2 {
+    color: white;
+    background: #baed1f;
+    font-size: 32px;
+    padding: 20px;
+    margin-top: -35px; }
 
 .slide-shadow {
   width: 1140px;
@@ -164,7 +162,8 @@ section.page {
   margin-top: -35px; }
 
 .da-slider {
-  background-color: rgba(0, 0, 0, 0) !important; }
+  background-color: rgba(0, 0, 0, 0) !important;
+  overflow: visible !important; }
 
 .da-slide div.da-slide-content {
   height: auto !important; }
@@ -174,8 +173,7 @@ section.page {
 
 .post-thumbnail {
   background: url(img/thumbnail_shadow.png) no-repeat center bottom;
-  padding-bottom: 35px;
-  margin-top: -35px; }
+  padding-bottom: 35px; }
   .post-thumbnail img {
     width: 100% !important; }
 
