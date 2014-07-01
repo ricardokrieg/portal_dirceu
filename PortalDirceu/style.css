@@ -138,12 +138,17 @@ footer.footer {
   background: white url(img/page_bottom.png) no-repeat center bottom;
   padding-bottom: 63px; }
 
+section.page {
+  margin-top: -97px;
+  padding-top: 97px; }
+
 .page-title-container {
   background: url(img/title_shadow.png) no-repeat left bottom;
   margin-left: 50%;
   margin-top: -35px;
   width: 50%;
-  padding-bottom: 12px; }
+  padding-bottom: 12px;
+  position: relative; }
   .page-title-container h2 {
     color: white;
     background: #baed1f;
@@ -158,8 +163,7 @@ footer.footer {
   margin: 0 auto; }
 
 .eps-slide {
-  background: #baed1f url(img/slide_bg.png) repeat-x bottom !important;
-  margin-top: -35px; }
+  background: #baed1f url(img/slide_bg.png) repeat-x bottom !important; }
 
 .da-slider {
   background-color: rgba(0, 0, 0, 0) !important;
@@ -173,7 +177,8 @@ footer.footer {
 
 .post-thumbnail {
   background: url(img/thumbnail_shadow.png) no-repeat center bottom;
-  padding-bottom: 35px; }
+  padding-bottom: 35px;
+  position: relative; }
   .post-thumbnail img {
     width: 100% !important; }
 

@@ -209,9 +209,10 @@ footer.footer {
     padding-bottom: 63px;
 }
 
-// section.page {
-//     margin-top: 35px;
-// }
+section.page {
+    margin-top: -97px;
+    padding-top: 97px;
+}
 
 .page-title-container {
     background: url(img/title_shadow.png) no-repeat left bottom;
@@ -219,6 +220,7 @@ footer.footer {
     margin-top: -35px;
     width: 50%;
     padding-bottom: 12px;
+    position: relative;
 
     h2 {
         color: white;
@@ -238,7 +240,7 @@ footer.footer {
 
 .eps-slide {
     background: $green url(img/slide_bg.png) repeat-x bottom !important;
-    margin-top: -35px;
+    // margin-top: -35px;
 }
 
 .da-slider {
@@ -259,6 +261,7 @@ footer.footer {
     background: url(img/thumbnail_shadow.png) no-repeat center bottom;
     padding-bottom: 35px;
     // margin-top: -35px;
+    position: relative;
 
     img {
         width: 100% !important;
