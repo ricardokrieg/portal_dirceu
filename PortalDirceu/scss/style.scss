@@ -229,30 +229,28 @@ section.page {
     }
 }
 
-// .slide-container {
-// }
-
-// .slide-shadow {
-//     width: 1375px;
-//     height: 43px;
-//     background: url(img/slide_shadow.png) no-repeat bottom;
-//     margin: 0 auto;
-// }
+.slide-shadow {
+    width: 1140px;
+    height: 36px;
+    background: url(img/slide_shadow.png) no-repeat bottom;
+    margin: 0 auto;
+}
 
 .eps-slide {
-    width: 100% !important;
-    max-width: 100% !important;
-    // height: 400px !important;
-    // max-height: 400px !important;
     background: $green url(img/slide_bg.png) repeat-x bottom !important;
     margin-top: -35px;
 }
 
 .da-slider {
     background-color: rgba(0, 0, 0, 0) !important;
-    // background: $green url(img/slide_bg.png) repeat-x bottom !important;
-    // position: static !important;
-    // overflow: hidden;
+}
+
+.da-slide div.da-slide-content {
+    height: auto !important;
+}
+
+.da-arrows span, .da-dots span {
+    background: darken($green, 10%) !important;
 }
 
 .post-thumbnail {

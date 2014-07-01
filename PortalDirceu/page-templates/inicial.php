@@ -6,7 +6,10 @@
         <?php while (have_posts()): the_post(); ?>
             <section class='page'>
                 <?php apply_filters('the_content', get_the_content()); ?>
-                <?php if (isset($global_slide_id)) echo do_shortcode("[epsshortcode id=" .$global_slide_id. "]") ?>
+                <?php if (isset($global_slide_id)): ?>
+                    <?php echo do_shortcode("[epsshortcode id=" .$global_slide_id. "]") ?>
+                    <div class='slide-shadow'></div>
+                <?php endif; ?>
 
                 <section class='content'>
                     <div class='container no-padding'>
