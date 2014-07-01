@@ -172,6 +172,12 @@ section.page {
 .da-slide div.da-slide-content {
   height: auto !important; }
 
+.da-arrows {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+  height: 400px; }
+
 .da-arrows span, .da-dots span {
   background: #9bc910 !important; }
 

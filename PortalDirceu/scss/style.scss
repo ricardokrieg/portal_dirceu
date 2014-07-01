@@ -240,17 +240,22 @@ section.page {
 
 .eps-slide {
     background: $green url(img/slide_bg.png) repeat-x bottom !important;
-    // margin-top: -35px;
 }
 
 .da-slider {
     background-color: rgba(0, 0, 0, 0) !important;
     overflow: visible !important;
-    // overflow-x: hidden !important;
 }
 
 .da-slide div.da-slide-content {
     height: auto !important;
+}
+
+.da-arrows {
+    position: relative;
+    width: 1140px;
+    margin: 0 auto;
+    height: 400px;
 }
 
 .da-arrows span, .da-dots span {
