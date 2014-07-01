@@ -159,8 +159,9 @@ section.page {
 .slide-shadow {
   width: 1140px;
   height: 36px;
-  background: url(img/slide_shadow.png) no-repeat bottom;
-  margin: 0 auto; }
+  background: url(img/slide_shadow.png) no-repeat center bottom;
+  margin: 0 auto;
+  position: relative; }
 
 .eps-slide {
   background: #baed1f url(img/slide_bg.png) repeat-x bottom !important; }

@@ -234,8 +234,9 @@ section.page {
 .slide-shadow {
     width: 1140px;
     height: 36px;
-    background: url(img/slide_shadow.png) no-repeat bottom;
+    background: url(img/slide_shadow.png) no-repeat center bottom;
     margin: 0 auto;
+    position: relative;
 }
 
 .eps-slide {
@@ -265,7 +266,6 @@ section.page {
 .post-thumbnail {
     background: url(img/thumbnail_shadow.png) no-repeat center bottom;
     padding-bottom: 35px;
-    // margin-top: -35px;
     position: relative;
 
     img {
