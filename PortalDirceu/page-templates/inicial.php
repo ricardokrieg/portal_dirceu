@@ -14,8 +14,6 @@
                 <section class='content'>
                     <div class='container no-padding'>
                         <?php the_content(); ?>
-
-                        <?php portaldirceu_post_thumbnail('no-shadow'); ?>
                     </div>
                 </section>
             </section>

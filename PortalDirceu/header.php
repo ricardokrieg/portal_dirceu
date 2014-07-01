@@ -22,6 +22,7 @@
     <link rel='pingback' href="<?php bloginfo('pingback_url'); ?>">
     <link rel='shortcut icon' href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type='image/x-icon'>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
 
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>

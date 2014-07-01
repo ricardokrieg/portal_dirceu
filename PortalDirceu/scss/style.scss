@@ -11,6 +11,7 @@ $menu_height: 50px;
 
 body {
     background: $ice_white;
+    font-family: 'Open Sans', sans-serif;
 
     a {
         color: darken($green, 10%);
@@ -408,28 +409,37 @@ section.page {
         width: 120px;
         height: 120px;
         border-radius: 8px;
-        padding-top: 30px;
+        padding-top: 20px;
         text-align: center;
         color: white;
         background: url(img/plano_shadow.png) no-repeat;
         margin: 20px;
         float: left;
+        font-size: 18px;
+
+        .value {
+            margin-top: -6px;
+        }
 
         .dollar {
             font-size: 40px;
+            font-weight: bold;
         }
         .dollar:after {
             content: ','
         }
         .cent {
             font-size: 10px;
-            line-height: 40px;
+            line-height: 46px;
             vertical-align: top;
-            margin-left: -8px;
+            margin-left: -14px;
+            font-weight: bold;
         }
         .rs {
             line-height: 54px;
             vertical-align: top;
+            font-weight: bold;
+            margin-right: -4px;
         }
     }
 }
