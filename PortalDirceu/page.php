@@ -10,15 +10,7 @@
             <section class='page'>
                 <section class='content'>
                     <div class='container with-padding'>
-                        <?php if (is_search()): ?>
-                            <?php the_excerpt(); ?>
-                        <?php else: ?>
-                            <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-                        <?php endif; ?>
-
-                        <div class='edit-link'>
-                            <?php edit_post_link(__('Editar', 'portaldirceu'), "<span class='edit-link'>", "</span>"); ?>
-                        </div>
+                        <?php the_content(); ?>
                     </div>
                 </section>
             </section>

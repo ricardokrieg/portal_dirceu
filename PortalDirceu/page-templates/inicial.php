@@ -13,11 +13,7 @@
             <section class='page'>
                 <section class='content'>
                     <div class='container no-padding'>
-                        <?php if (is_search()): ?>
-                            <?php the_excerpt(); ?>
-                        <?php else: ?>
-                            <?php the_content(__('Leia Mais', 'portaldirceu')); ?>
-                        <?php endif; ?>
+                        <?php the_content(); ?>
 
                         <?php portaldirceu_post_thumbnail('no-shadow'); ?>
                     </div>
