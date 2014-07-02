@@ -20,7 +20,8 @@ body {
 
 header.header {
   background: #f6f6f7 url(img/header_shadow.png) repeat-x top left;
-  padding-top: 80px; }
+  padding-top: 80px;
+  padding-top: 40px; }
   header.header h1.branding {
     position: absolute;
     left: 104px;
@@ -35,52 +36,54 @@ header.header {
     left: 38px;
     bottom: -50px;
     z-index: 2; }
+  header.header .navbar-toggle {
+    background: #04789c; }
+    header.header .navbar-toggle span {
+      background: white; }
   header.header .menu-menu-principal-container {
+    display: block;
+    float: right; }
+    header.header .menu-menu-principal-container ul {
+      background: url(img/menu_bg.png) repeat-x;
+      height: 50px;
+      float: left;
+      margin: 0; }
+      header.header .menu-menu-principal-container ul li a {
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        height: 50px;
+        display: block;
+        font-size: 14px;
+        padding: 0 10px; }
+      header.header .menu-menu-principal-container ul li a:hover {
+        text-decoration: none; }
+      header.header .menu-menu-principal-container ul li:hover a {
+        color: #404040;
+        background: url(img/menu_active_bg.png) repeat-x #baed1f;
+        height: 40px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px; }
+  header.header .menu-left-bg, header.header .menu-right-bg {
     display: none; }
 
-@media (min-width: 600px) {
-  header.header {
-    padding-top: 40px; }
-    header.header h1.branding {
-      left: 127px; }
-    header.header .logo-bg {
-      left: 60px; }
-    header.header .menu-menu-principal-container {
-      display: block;
-      float: right; }
-      header.header .menu-menu-principal-container ul {
-        background: url(img/menu_bg.png) repeat-x;
-        height: 50px;
-        float: left;
-        margin: 0; }
-        header.header .menu-menu-principal-container ul li a {
-          text-transform: uppercase;
-          color: white;
-          text-decoration: none;
-          line-height: 50px;
-          height: 50px;
-          display: block;
-          font-size: 14px;
-          padding: 0 10px; }
-        header.header .menu-menu-principal-container ul li a:hover {
-          text-decoration: none; }
-        header.header .menu-menu-principal-container ul li:hover a {
-          color: #404040;
-          background: url(img/menu_active_bg.png) repeat-x #baed1f;
-          height: 40px;
-          border-bottom-left-radius: 4px;
-          border-bottom-right-radius: 4px; }
-      header.header .menu-menu-principal-container .menu-left-bg, header.header .menu-menu-principal-container .menu-right-bg {
-        width: 33px;
-        height: 50px;
-        background-repeat: no-repeat;
-        display: block; }
-      header.header .menu-menu-principal-container .menu-left-bg {
-        float: left;
-        background-image: url(img/menu_left_bg.png); }
-      header.header .menu-menu-principal-container .menu-right-bg {
-        float: left;
-        background-image: url(img/menu_right_bg.png); } }
+@media (min-width: 1200px) {
+  header.header h1.branding {
+    left: 127px; }
+  header.header .logo-bg {
+    left: 60px; }
+  header.header .menu-left-bg, header.header .menu-right-bg {
+    display: block;
+    width: 33px;
+    height: 50px;
+    background-repeat: no-repeat; }
+  header.header .menu-left-bg {
+    float: left;
+    background-image: url(img/menu_left_bg.png); }
+  header.header .menu-right-bg {
+    float: left;
+    background-image: url(img/menu_right_bg.png); } }
 .footer-shadow {
   height: 48px;
   background: #04789c;

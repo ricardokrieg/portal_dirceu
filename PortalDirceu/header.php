@@ -23,7 +23,7 @@
     <link rel='shortcut icon' href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type='image/x-icon'>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
-    <link rel='stylesheet' type='text/css' href='//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' type='text/css' href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css">
 
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
     <script src='//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
@@ -51,6 +51,15 @@
 
             <span class='logo-bg'></span>
 
-            <?php wp_nav_menu(array('theme_location' => 'principal', 'menu_class' => 'list-inline', 'items_wrap' => '<span class="menu-left-bg"></span><ul id="%1$s" class="%2$s">%3$s</ul><span class="menu-right-bg"></span>')); ?>
+            <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='.navbar-collapse'>
+                <span class='sr-only'>Menu</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+
+            <div class='navbar-collapse collapse'>
+                <?php wp_nav_menu(array('theme_location' => 'principal', 'menu_class' => 'list-inline', 'items_wrap' => '<span class="menu-left-bg"></span><ul id="%1$s" class="%2$s">%3$s</ul><span class="menu-right-bg"></span>')); ?>
+            </div>
         </div>
     </header>
