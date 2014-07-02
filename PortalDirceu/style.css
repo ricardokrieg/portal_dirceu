@@ -24,7 +24,7 @@ header.header {
   padding-top: 40px; }
   header.header h1.branding {
     position: absolute;
-    left: 104px;
+    left: 70px;
     bottom: -43px;
     z-index: 3; }
   header.header .logo-bg {
@@ -33,7 +33,7 @@ header.header {
     background: url(img/logo_bg.png) no-repeat;
     display: block;
     position: absolute;
-    left: 38px;
+    left: 4px;
     bottom: -50px;
     z-index: 2; }
   header.header .navbar-toggle {
@@ -68,6 +68,11 @@ header.header {
   header.header .menu-left-bg, header.header .menu-right-bg {
     display: none; }
 
+@media (min-width: 480px) {
+  header.header h1.branding {
+    left: 104px; }
+  header.header .logo-bg {
+    left: 38px; } }
 @media (min-width: 1200px) {
   header.header h1.branding {
     left: 127px; }
