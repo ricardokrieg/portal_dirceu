@@ -39,26 +39,36 @@ header.header {
   header.header .navbar-toggle {
     background: #04789c; }
     header.header .navbar-toggle span {
+      background: #baed1f; }
+    header.header .navbar-toggle.collapsed span {
       background: white; }
+  header.header .navbar-collapse {
+    margin-left: -60px;
+    margin-right: -60px;
+    overflow: visible;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    padding-top: 60px;
+    background: #04789c;
+    width: 100%; }
   header.header .menu-menu-principal-container {
-    display: block;
-    float: right; }
+    display: block; }
     header.header .menu-menu-principal-container ul {
-      background: url(img/menu_bg.png) repeat-x;
-      height: 50px;
-      float: left;
       margin: 0; }
-      header.header .menu-menu-principal-container ul li a {
-        text-transform: uppercase;
-        color: white;
-        text-decoration: none;
-        line-height: 50px;
-        height: 50px;
-        display: block;
-        font-size: 14px;
-        padding: 0 10px; }
-      header.header .menu-menu-principal-container ul li a:hover {
-        text-decoration: none; }
+      header.header .menu-menu-principal-container ul li {
+        display: block; }
+        header.header .menu-menu-principal-container ul li a {
+          text-transform: uppercase;
+          color: white;
+          text-decoration: none;
+          line-height: 50px;
+          height: 50px;
+          display: block;
+          font-size: 14px;
+          padding: 0 10px; }
+        header.header .menu-menu-principal-container ul li a:hover {
+          text-decoration: none; }
       header.header .menu-menu-principal-container ul li:hover a {
         color: #404040;
         background: url(img/menu_active_bg.png) repeat-x #baed1f;
@@ -73,6 +83,25 @@ header.header {
     left: 104px; }
   header.header .logo-bg {
     left: 38px; } }
+@media (min-width: 996px) {
+  header.header .navbar-collapse {
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+    position: static;
+    top: 0;
+    z-index: 0;
+    padding-top: 0;
+    background: none;
+    width: auto; }
+  header.header .menu-menu-principal-container {
+    float: right; }
+    header.header .menu-menu-principal-container ul {
+      background: url(img/menu_bg.png) repeat-x;
+      height: 50px;
+      float: left; }
+      header.header .menu-menu-principal-container ul li {
+        display: inline-block; } }
 @media (min-width: 1200px) {
   header.header h1.branding {
     left: 127px; }

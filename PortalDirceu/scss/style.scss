@@ -59,21 +59,37 @@ header.header {
         background: $blue;
 
         span {
-            background: white;
+            background: $green;
         }
+
+        &.collapsed {
+            span {
+                background: white;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        margin-left: -60px;
+        margin-right: -60px;
+        overflow: visible;
+        position: absolute;
+        top: 50px;
+        z-index: 1;
+        padding-top: 60px;
+        background: $blue;
+        width: 100%;
     }
 
     .menu-menu-principal-container {
         display: block;
-        float: right;
 
         ul {
-            background: url(img/menu_bg.png) repeat-x;
-            height: $menu_height;
-            float: left;
             margin: 0;
 
             li {
+                display: block;
+
                 a {
                     text-transform: uppercase;
                     color: white;
@@ -113,6 +129,36 @@ header.header {
 
         .logo-bg {
             left: 38px;
+        }
+    }
+}
+
+@media (min-width: 996px) {
+    header.header {
+        .navbar-collapse {
+            margin-left: 0;
+            margin-right: 0;
+            overflow: auto;
+            position: static;
+            top: 0;
+            z-index: 0;
+            padding-top: 0;
+            background: none;
+            width: auto;
+        }
+
+        .menu-menu-principal-container {
+            float: right;
+
+            ul {
+                background: url(img/menu_bg.png) repeat-x;
+                height: $menu_height;
+                float: left;
+
+                li {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
