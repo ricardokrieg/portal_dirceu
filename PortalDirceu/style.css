@@ -157,6 +157,9 @@ section.page {
     padding: 20px;
     margin-top: -35px; }
 
+.slide-container {
+  overflow: hidden; }
+
 .slide-shadow {
   width: 1140px;
   height: 36px;
@@ -173,6 +176,9 @@ section.page {
 
 .da-slide div.da-slide-content {
   height: auto !important; }
+
+.da-slide-content {
+  margin-left: 190px; }
 
 .da-arrows {
   position: relative;
@@ -257,7 +263,7 @@ section.page {
   margin-bottom: 10px; }
 
 .gmw-thumbnail-map img {
-  width: 1140px;
+  width: 100%;
   height: 335px; }
 
 .post-thumbnail.contact-map {
@@ -283,15 +289,16 @@ section.page {
     width: 120px;
     height: 120px;
     border-radius: 8px;
-    padding-top: 20px;
+    padding-top: 25px;
     text-align: center;
     color: white;
-    background: url(img/plano_shadow.png) no-repeat;
+    background: url(img/plano_shadow_dark.png) no-repeat;
     margin: 20px;
     font-size: 18px;
-    display: inline-block; }
+    display: inline-block;
+    position: relative; }
     .planos-container .plano .value {
-      margin-top: -6px; }
+      margin-top: -12px; }
     .planos-container .plano .dollar {
       font-size: 40px;
       font-weight: bold; }
@@ -308,6 +315,21 @@ section.page {
       vertical-align: top;
       font-weight: bold;
       margin-right: -4px; }
+    .planos-container .plano .wifi {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      font-size: 12px;
+      font-weight: bold;
+      margin-left: 12px; }
+      .planos-container .plano .wifi i {
+        display: inline-block;
+        margin-bottom: -4px;
+        margin-left: 2px;
+        width: 10px;
+        height: 15px;
+        background: url(img/wifi_icon.png) no-repeat bottom right; }
 
 .large-box-container {
   background: url(img/title_shadow.png) left bottom no-repeat;

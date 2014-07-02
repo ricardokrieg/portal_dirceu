@@ -860,6 +860,16 @@ function portal_dirceu_register_required_plugins() {
             'external_url'       => '',
         ),
         array(
+            'name'               => 'CP Google Maps',
+            'slug'               => 'codepeople-post-map',
+            'source'             => get_stylesheet_directory() . '/plugins/codepeople-post-map.zip',
+            'required'           => true,
+            'version'            => '',
+            'force_activation'   => true,
+            'force_deactivation' => false,
+            'external_url'       => '',
+        ),
+        array(
             'name'               => 'Advanced Custom Fields',
             'slug'               => 'advanced-custom-fields',
             'source'             => get_stylesheet_directory() . '/plugins/advanced-custom-fields.zip',

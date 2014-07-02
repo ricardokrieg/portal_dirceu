@@ -64,6 +64,12 @@ function portaldirceu_planos_shortcode() {
                         <span class='dollar'><?php echo $dollar ?></span>
                         <span class='cent'><?php echo $cent ?></span>
                     </div>
+
+                    <?php if (get_field('plano-wi-fi-gratis')): ?>
+                        <div class='wifi'>
+                            Wi-fi Grátis <i></i>
+                        </div>
+                    <?php endif; ?>
                 </div>
     <?php
             endwhile;
