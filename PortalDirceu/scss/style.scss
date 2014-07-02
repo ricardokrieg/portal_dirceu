@@ -26,6 +26,7 @@ body {
     padding-right: 60px;
     position: relative;
 }
+
 .container.no-padding {
     padding-left: 0;
     padding-right: 0;
@@ -33,11 +34,11 @@ body {
 
 header.header {
     background: $ice_white url(img/header_shadow.png) repeat-x top left;
-    padding-top: 40px;
+    padding-top: 80px;
 
     h1.branding {
         position: absolute;
-        left: 127px;
+        left: 104px;
         bottom: -43px;
         z-index: 3;
     }
@@ -48,59 +49,78 @@ header.header {
         background: url(img/logo_bg.png) no-repeat;
         display: block;
         position: absolute;
-        left: 60px;
+        left: 38px;
         bottom: -50px;
         z-index: 2;
     }
 
     .menu-menu-principal-container {
-        float: right;
+        display: none;
+    }
+}
 
-        ul {
-            background: url(img/menu_bg.png) repeat-x;
-            height: $menu_height;
-            float: left;
-            margin: 0;
+@media (min-width: 600px) {
+    header.header {
+        padding-top: 40px;
 
-            li {
-                a {
-                    text-transform: uppercase;
-                    color: white;
-                    text-decoration: none;
-                    line-height: $menu_height;
-                    height: $menu_height;
-                    display: block;
-                    font-size: 14px;
-                    padding: 0 10px;
-                }
-                a:hover {
-                    text-decoration: none;
-                }
-            }
-            li:hover {
-                a {
-                    color: lighten(black, 25%);
-                    background: url(img/menu_active_bg.png) repeat-x $green;
-                    height: $menu_height - 10px;
-                    border-bottom-left-radius: 4px;
-                    border-bottom-right-radius: 4px;
-                }
-            }
+        h1.branding {
+            left: 127px;
         }
 
-        .menu-left-bg, .menu-right-bg {
-            width: 33px;
-            height: $menu_height;
-            background-repeat: no-repeat;
+        .logo-bg {
+            left: 60px;
+        }
+
+        .menu-menu-principal-container {
             display: block;
-        }
-        .menu-left-bg {
-            float: left;
-            background-image: url(img/menu_left_bg.png);
-        }
-        .menu-right-bg {
-            float: left;
-            background-image: url(img/menu_right_bg.png);
+            float: right;
+
+            ul {
+                background: url(img/menu_bg.png) repeat-x;
+                height: $menu_height;
+                float: left;
+                margin: 0;
+
+                li {
+                    a {
+                        text-transform: uppercase;
+                        color: white;
+                        text-decoration: none;
+                        line-height: $menu_height;
+                        height: $menu_height;
+                        display: block;
+                        font-size: 14px;
+                        padding: 0 10px;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                    }
+                }
+                li:hover {
+                    a {
+                        color: lighten(black, 25%);
+                        background: url(img/menu_active_bg.png) repeat-x $green;
+                        height: $menu_height - 10px;
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                    }
+                }
+            }
+
+            .menu-left-bg, .menu-right-bg {
+                width: 33px;
+                height: $menu_height;
+                background-repeat: no-repeat;
+                display: block;
+            }
+            .menu-left-bg {
+                float: left;
+                background-image: url(img/menu_left_bg.png);
+            }
+            .menu-right-bg {
+                float: left;
+                background-image: url(img/menu_right_bg.png);
+            }
         }
     }
 }
@@ -217,17 +237,29 @@ section.page {
 
 .page-title-container {
     background: url(img/title_shadow.png) no-repeat left bottom;
-    margin-left: 50%;
-    margin-top: -20px;
-    width: 50%;
     padding-bottom: 12px;
     position: relative;
+    width: 100%;
 
     h2 {
         color: white;
         background: $green;
         font-size: 32px;
         padding: 20px;
+        padding-top: 40px;
+    }
+}
+
+@media (min-width: 600px) {
+    .page-title-container {
+        margin-left: 50%;
+        margin-top: -20px;
+        width: 50%;
+        position: relative;
+
+        h2 {
+            padding: 20px;
+        }
     }
 }
 
@@ -272,13 +304,20 @@ section.page {
 }
 
 .post-thumbnail {
-    background: url(img/thumbnail_shadow.png) no-repeat center bottom;
-    position: relative;
-    padding-bottom: 35px;
-    margin-bottom: -55px;
+    display: none;
+}
 
-    &.no-shadow {
-        background: none;
+@media (min-width: 600px) {
+    .post-thumbnail {
+        display: block;
+        background: url(img/thumbnail_shadow.png) no-repeat center bottom;
+        position: relative;
+        padding-bottom: 35px;
+        margin-bottom: -55px;
+
+        &.no-shadow {
+            background: none;
+        }
     }
 }
 
