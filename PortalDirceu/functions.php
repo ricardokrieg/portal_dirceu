@@ -148,16 +148,6 @@ function portaldirceu_has_featured_posts() {
 }
 
 function portaldirceu_widgets_init() {
-	register_sidebar(array(
-		'name'          => __('Mapa', 'portaldirceu'),
-		'id'            => 'widget-map',
-		'description'   => __('Inserir o mapa neste widget', 'portaldirceu'),
-		'before_widget' => '<div class="post-thumbnail contact-map">',
-		'after_widget'  => '</div>',
-		'before_title'  => '',
-		'after_title'   => '',
-	));
-
 	// register_sidebar(array(
 	// 	'name'          => __('Página Inicial', 'portaldirceu'),
 	// 	'id'            => 'sidebar-home',
@@ -843,16 +833,6 @@ function portal_dirceu_register_required_plugins() {
             'name'               => 'Contact Form 7',
             'slug'               => 'contact-form-7',
             'source'             => get_stylesheet_directory() . '/plugins/contact-form-7.zip',
-            'required'           => true,
-            'version'            => '',
-            'force_activation'   => true,
-            'force_deactivation' => false,
-            'external_url'       => '',
-        ),
-        array(
-            'name'               => 'Google Maps Widget',
-            'slug'               => 'google-maps-widget',
-            'source'             => get_stylesheet_directory() . '/plugins/google-maps-widget.zip',
             'required'           => true,
             'version'            => '',
             'force_activation'   => true,
