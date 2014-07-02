@@ -405,6 +405,9 @@ section.page {
 }
 
 .planos-container {
+    width: 100%;
+    text-align: center;
+
     .plano {
         width: 120px;
         height: 120px;
@@ -414,8 +417,8 @@ section.page {
         color: white;
         background: url(img/plano_shadow.png) no-repeat;
         margin: 20px;
-        float: left;
         font-size: 18px;
+        display: inline-block;
 
         .value {
             margin-top: -6px;
@@ -440,6 +443,56 @@ section.page {
             vertical-align: top;
             font-weight: bold;
             margin-right: -4px;
+        }
+    }
+}
+
+.large-box-container {
+    background: url(img/title_shadow.png) left bottom no-repeat;
+    background-size: 350px;
+    width: 350px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin: auto;
+    padding-bottom: 18px;
+    text-align: justify;
+
+    .large-box {
+        padding: 20px;
+        background: white;
+        font-size: 12px;
+
+        strong {
+            font-size: 16px;
+            display: block;
+            font-weight: bold;
+            color: $blue;
+            text-align: left;
+        }
+    }
+}
+
+.small-box {
+    position: relative;
+
+    img {
+        float: left;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .content {
+        margin-left: 70px;
+        font-size: 12px;
+
+        strong {
+            font-size: 16px;
+            display: block;
+            font-weight: bold;
+            color: $blue;
         }
     }
 }

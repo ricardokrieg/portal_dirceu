@@ -43,6 +43,8 @@ function portaldirceu_planos_init() {
 add_action('init', 'portaldirceu_planos_init');
 
 function portaldirceu_planos_shortcode() {
+    ob_start();
+
     $args = array('posts_per_page' => -1, 'post_type' => 'portaldirceu-plano', 'orderby' => 'menu_order', 'order' => 'ASC');
     $query = new WP_Query($args);
 ?>
@@ -73,6 +75,11 @@ function portaldirceu_planos_shortcode() {
     //Reset the query
     wp_reset_query();
     wp_reset_postdata();
+
+    $output_string = ob_get_contents();;
+    ob_end_clean();
+
+    return $output_string;
 } // portaldirceu_planos_shortcode
 
 add_shortcode('planos', 'portaldirceu_planos_shortcode');
