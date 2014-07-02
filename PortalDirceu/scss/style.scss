@@ -218,7 +218,7 @@ section.page {
 .page-title-container {
     background: url(img/title_shadow.png) no-repeat left bottom;
     margin-left: 50%;
-    margin-top: -35px;
+    margin-top: -20px;
     width: 50%;
     padding-bottom: 12px;
     position: relative;
@@ -228,7 +228,6 @@ section.page {
         background: $green;
         font-size: 32px;
         padding: 20px;
-        margin-top: -35px;
     }
 }
 
@@ -274,8 +273,9 @@ section.page {
 
 .post-thumbnail {
     background: url(img/thumbnail_shadow.png) no-repeat center bottom;
-    padding-bottom: 35px;
     position: relative;
+    padding-bottom: 35px;
+    margin-bottom: -55px;
 
     &.no-shadow {
         background: none;

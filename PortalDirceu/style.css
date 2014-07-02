@@ -146,7 +146,7 @@ section.page {
 .page-title-container {
   background: url(img/title_shadow.png) no-repeat left bottom;
   margin-left: 50%;
-  margin-top: -35px;
+  margin-top: -20px;
   width: 50%;
   padding-bottom: 12px;
   position: relative; }
@@ -154,8 +154,7 @@ section.page {
     color: white;
     background: #baed1f;
     font-size: 32px;
-    padding: 20px;
-    margin-top: -35px; }
+    padding: 20px; }
 
 .slide-container {
   overflow: hidden; }
@@ -191,8 +190,9 @@ section.page {
 
 .post-thumbnail {
   background: url(img/thumbnail_shadow.png) no-repeat center bottom;
+  position: relative;
   padding-bottom: 35px;
-  position: relative; }
+  margin-bottom: -55px; }
   .post-thumbnail.no-shadow {
     background: none; }
 
