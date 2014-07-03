@@ -355,15 +355,17 @@ section.page {
   border: none;
   background: none; }
 #faq h4.panel-title a {
-  background: url(img/submit_gray.png) no-repeat left bottom;
   text-transform: uppercase;
-  padding-left: 60px;
-  display: block;
-  height: 36px;
-  line-height: 36px; }
-#faq h4.panel-title a:hover, #faq h4.panel-title a.open {
-  background-image: url(img/submit.png); }
+  display: block; }
 
+@media (min-width: 1024px) {
+  #faq h4.panel-title a {
+    background: url(img/submit_gray.png) no-repeat left bottom;
+    padding-left: 60px;
+    height: 36px;
+    line-height: 36px; }
+  #faq h4.panel-title a:hover, #faq h4.panel-title a.open {
+    background-image: url(img/submit.png); } }
 .planos-container {
   width: 100%;
   text-align: center; }
