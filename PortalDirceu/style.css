@@ -41,7 +41,8 @@ header.header {
     bottom: -50px;
     z-index: 2; }
   header.header .navbar-toggle {
-    background: #04789c; }
+    background: #04789c;
+    margin-right: -20px; }
     header.header .navbar-toggle span {
       background: #baed1f; }
     header.header .navbar-toggle.collapsed span {
@@ -83,6 +84,8 @@ header.header {
     display: none; }
 
 @media (min-width: 480px) {
+  header.header .navbar-toggle {
+    margin-right: 15px; }
   header.header h1.branding {
     left: 104px; }
   header.header .logo-bg {
@@ -278,67 +281,71 @@ section.page {
     margin-bottom: -55px; }
     .post-thumbnail.no-shadow {
       background: none; } }
-.wpcf7-form label {
-  background: #e6e6e6;
-  float: left;
-  line-height: 45px;
-  padding: 0 10px;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  cursor: pointer; }
-.wpcf7-form label[for=mensagem] {
-  width: 100%;
-  border-radius: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  margin-bottom: 0; }
-.wpcf7-form .wpcf7-form-control-wrap {
-  display: block !important;
-  overflow: hidden; }
-.wpcf7-form .wpcf7-form-control-wrap.mensagem {
-  float: left;
+.wpcf7-form input, .wpcf7-form textarea {
   width: 100%; }
-.wpcf7-form .esquerda .wpcf7-form-control-wrap {
-  width: 50%;
-  float: left; }
-  .wpcf7-form .esquerda .wpcf7-form-control-wrap .wpcf7-text {
-    border-radius: 0; }
-.wpcf7-form .direita label {
-  border-radius: 0; }
-.wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
-  background: #e6e6e6;
-  width: 100%;
-  border: none;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  margin-bottom: 10px;
-  padding-left: 8px; }
-.wpcf7-form .wpcf7-text {
-  height: 45px; }
-.wpcf7-form .wpcf7-textarea {
-  border-radius: 0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  height: 150px; }
-.wpcf7-form [type=submit] {
-  float: right;
-  background: url(img/submit.png) no-repeat bottom right;
-  border: none;
-  font-weight: bold;
-  width: 140px;
-  height: 36px;
-  font-size: 18px;
-  margin: 40px; }
-  .wpcf7-form [type=submit]:hover {
-    color: #9bc910;
-    background-image: url(img/submit_hover.png); }
-.wpcf7-form .wpcf7-not-valid-tip {
-  display: table-cell; }
-.wpcf7-form .wpcf7-validation-errors {
-  display: inline-block; }
 .wpcf7-form br {
   display: none; }
 
+@media (min-width: 800px) {
+  .wpcf7-form label {
+    background: #e6e6e6;
+    float: left;
+    line-height: 45px;
+    padding: 0 10px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer; }
+  .wpcf7-form label[for=mensagem] {
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 0; }
+  .wpcf7-form .wpcf7-form-control-wrap {
+    display: block !important;
+    overflow: hidden; }
+  .wpcf7-form .wpcf7-form-control-wrap.mensagem {
+    float: left;
+    width: 100%; }
+  .wpcf7-form .wpcf7-text, .wpcf7-form .wpcf7-textarea {
+    background: #e6e6e6;
+    width: 100%;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-bottom: 10px;
+    padding-left: 8px; }
+  .wpcf7-form .wpcf7-text {
+    height: 45px; }
+  .wpcf7-form .wpcf7-textarea {
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 150px; }
+  .wpcf7-form [type=submit] {
+    float: right;
+    background: url(img/submit.png) no-repeat bottom right;
+    border: none;
+    font-weight: bold;
+    width: 140px;
+    height: 36px;
+    font-size: 18px;
+    margin: 40px; }
+    .wpcf7-form [type=submit]:hover {
+      color: #9bc910;
+      background-image: url(img/submit_hover.png); }
+  .wpcf7-form .wpcf7-not-valid-tip {
+    display: table-cell; }
+  .wpcf7-form .wpcf7-validation-errors {
+    display: inline-block; } }
+@media (min-width: 1024px) {
+  .wpcf7-form .esquerda .wpcf7-form-control-wrap {
+    width: 50%;
+    float: left; }
+    .wpcf7-form .esquerda .wpcf7-form-control-wrap .wpcf7-text {
+      border-radius: 0; }
+  .wpcf7-form .direita label {
+    border-radius: 0; } }
 .wpcf7-form.invalid .wpcf7-text {
   margin-bottom: 36px; }
 .wpcf7-form.invalid .wpcf7-text[aria-required=true] {
