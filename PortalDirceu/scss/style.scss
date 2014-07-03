@@ -438,6 +438,9 @@ section.page {
     input, textarea {
         width: 100%;
     }
+    input[type='radio'] {
+        width: auto;
+    }
 
     br {
         display: none;
@@ -454,6 +457,10 @@ section.page {
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
             cursor: pointer;
+
+            &.no-bg {
+                background: none;
+            }
         }
         label[for=mensagem] {
             width: 100%;
@@ -489,6 +496,11 @@ section.page {
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
             height: 150px;
+        }
+        .wpcf7-list-item {
+            label {
+                background: none;
+            }
         }
 
         [type=submit] {
@@ -642,11 +654,19 @@ section.page {
 .large-box-container {
     background: url(img/title_shadow.png) left bottom no-repeat;
     margin: auto;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
     text-align: justify;
     position: static;
     width: 100%;
     background-size: 100%;
+
+    a {
+        color: black;
+    }
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
 
     .large-box {
         padding: 20px;
@@ -675,6 +695,14 @@ section.page {
 
 .small-box {
     position: relative;
+
+    a {
+        color: black;
+    }
+    a:hover {
+        color: black;
+        text-decoration: none;
+    }
 
     img {
         float: left;

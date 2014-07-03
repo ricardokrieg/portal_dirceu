@@ -16,4 +16,7 @@ $(document).ready(function(){
         $('.da-slider').show();
         $('.slide-shadow').show();
     });
+
+    var hash = window.location.hash;
+    $('input[type=radio][value="'+ hash.substring(1) +'"]').attr('checked', true);
 });

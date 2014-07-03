@@ -55,6 +55,9 @@ function portaldirceu_planos_shortcode() {
             while ($query->have_posts()):
                 $query->the_post();
     ?>
+                <?php if (get_field('plano-link')): ?>
+                    <a href="<?php echo get_field('plano-link'); ?>" title="">
+                <?php endif; ?>
                 <div id="plano-<?php echo get_the_ID(); ?>" class='plano' style="background-color: <?php echo get_field('plano-cor') ?>">
                     <?php echo get_the_title(); ?>
                     <?php list($dollar, $cent) = explode('.', money_format('%n', get_field('plano-valor'))) ?>
@@ -71,6 +74,9 @@ function portaldirceu_planos_shortcode() {
                         </div>
                     <?php endif; ?>
                 </div>
+                <?php if (get_field('plano-link')): ?>
+                    </a>
+                <?php endif; ?>
     <?php
             endwhile;
         endif;
