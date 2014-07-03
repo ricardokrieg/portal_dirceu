@@ -8,6 +8,10 @@ body {
     color: #9bc910; }
   body a:hover {
     color: #baed1f; }
+  body img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
 
 .container.with-padding {
   padding-left: 60px;
@@ -187,9 +191,17 @@ footer.footer {
   padding-bottom: 63px; }
 
 section.page {
-  margin-top: -97px;
-  padding-top: 97px; }
+  margin-top: -35px;
+  padding-top: 50px; }
+  section.page.inicial {
+    margin-top: 0; }
 
+@media (min-width: 600px) {
+  section.page {
+    margin-top: -97px;
+    padding-top: 97px; }
+    section.page.inicial {
+      margin-top: -97px; } }
 .page-title-container {
   background: url(img/title_shadow.png) no-repeat left bottom;
   padding-bottom: 12px;
@@ -211,22 +223,34 @@ section.page {
     .page-title-container h2 {
       padding: 20px; } }
 .slide-container {
+  display: none;
   overflow: hidden; }
-
-.slide-shadow {
-  width: 1140px;
-  height: 36px;
-  background: url(img/slide_shadow.png) no-repeat center bottom;
-  margin: 0 auto;
-  position: relative; }
 
 .eps-slide {
   background: #baed1f url(img/slide_bg.png) repeat-x bottom !important; }
 
 .da-slider {
-  background-color: rgba(0, 0, 0, 0) !important;
-  overflow: visible !important; }
+  display: none; }
 
+.slide-shadow {
+  width: 100%;
+  height: 36px; }
+
+@media (min-width: 600px) {
+  .slide-container {
+    display: block; }
+
+  .da-slider {
+    display: block;
+    background-color: rgba(0, 0, 0, 0) !important;
+    overflow: visible !important; }
+
+  .slide-shadow {
+    width: 1140px;
+    height: 36px;
+    background: url(img/slide_shadow.png) no-repeat center bottom;
+    margin: 0 auto;
+    position: relative; } }
 .da-slide div.da-slide-content {
   height: auto !important; }
 
@@ -384,14 +408,12 @@ section.page {
 
 .large-box-container {
   background: url(img/title_shadow.png) left bottom no-repeat;
-  background-size: 350px;
-  width: 350px;
-  position: absolute;
-  top: 20%;
-  left: 50%;
   margin: auto;
   padding-bottom: 18px;
-  text-align: justify; }
+  text-align: justify;
+  position: static;
+  width: 100%;
+  background-size: 100%; }
   .large-box-container .large-box {
     padding: 20px;
     background: white;
@@ -403,6 +425,13 @@ section.page {
       color: #04789c;
       text-align: left; }
 
+@media (min-width: 800px) {
+  .large-box-container {
+    background-size: 350px;
+    width: 350px;
+    position: absolute;
+    top: 20%;
+    left: 50%; } }
 .small-box {
   position: relative; }
   .small-box img {

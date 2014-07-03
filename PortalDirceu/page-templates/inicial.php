@@ -12,7 +12,7 @@
 
     <div class='container'>
         <section id='main'>
-            <section class='page'>
+            <section class='page inicial'>
                 <section class='content'>
                     <div class='container no-padding'>
                         <?php the_content(); ?>

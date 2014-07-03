@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <?php while (have_posts()): the_post(); ?>
-    <div class='post-thumbnail'>
+    <div class='post-thumbnail post-thumbnail-map'>
         <?php echo do_shortcode('[codepeople-post-map]'); ?>
     </div>
 
