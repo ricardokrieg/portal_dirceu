@@ -382,6 +382,8 @@ section.page {
         display: block;
         background-color: rgba(0, 0, 0, 0) !important;
         overflow: visible !important;
+        position: relative !important;
+        width: 1140px !important;
     }
 
     .slide-shadow {
