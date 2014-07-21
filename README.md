@@ -7,3 +7,6 @@
 * sql5c75c.carrierzone.com
 
 * atendimento@portaldirceu.com.br
+
+* -5.105784
+* -42.756671
